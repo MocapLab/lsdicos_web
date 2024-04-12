@@ -14,13 +14,8 @@
         }
     });
 
-    function clickHandler(uri) {
-        deeplink.open(uri);
-        return false;
-    }
-
     var url = window.location.href;
-    var dl = url.replace("https://sl3dge78.github.io/lsdicos_web", "lsdicos://");
+    var dl = url.replace("https://sl3dge78.github.io/lsdicos_web/?", "lsdicos://");
     console.log(dl);
     deeplink.open(dl);
     </script>

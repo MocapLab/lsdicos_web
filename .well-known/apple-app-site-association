@@ -1,0 +1,15 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "6443809599.com.mocaplab.lsdicos3d" ],
+             "components": [
+               {
+                  "/": "/?import/*",
+                  "comment": "Matches any URL with a path that starts with /?import/."
+               }
+             ]
+           }
+       ]
+   }
+}

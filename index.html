@@ -17,7 +17,9 @@
     var url = window.location.href;
     var dl = url.replace("https://sl3dge78.github.io/lsdicos_web/?", "lsdicos://");
     console.log(dl);
-    window.location.href = dl;
+    if(dl != "lsdicos://") {
+        window.location.href = dl;
+    }
     // deeplink.open(dl);
     </script>
 </head>

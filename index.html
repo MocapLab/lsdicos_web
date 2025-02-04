@@ -15,8 +15,13 @@
     // });
 
     var url = window.location.href;
-    var dl = url.replace("https://mocaplab.github.io/lsdicos_web/?lsf/", "lsdicoslsf://");
-    dl = dl.replace("https://mocaplab.github.io/lsdicos_web/?asl/", "lsdicosasl://");
+    var dl = "";
+    if (url.includes("/?lsf")) {
+        dl = url.replace("https://mocaplab.github.io/lsdicos_web/?lsf/", "lsdicoslsf://");
+    } else {
+        dl = dl.replace("https://mocaplab.github.io/lsdicos_web/?asl/", "lsdicosasl://");
+    }
+    
     console.log(dl);
     if(dl != "lsdicoslsf://" && dl != "lsdicosasl://") {
         window.location.href = dl;

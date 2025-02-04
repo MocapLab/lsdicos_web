@@ -15,10 +15,10 @@
     // });
 
     var url = window.location.href;
-    var dl = url.replace("https://mocaplab.github.io/lsdicos_web/?lsf/", "lsdicos_lsf://");
-    dl = dl.replace("https://mocaplab.github.io/lsdicos_web/?asl/", "lsdicos_asl://");
+    var dl = url.replace("https://mocaplab.github.io/lsdicos_web/?lsf/", "lsdicoslsf://");
+    dl = dl.replace("https://mocaplab.github.io/lsdicos_web/?asl/", "lsdicosasl://");
     console.log(dl);
-    if(dl != "lsdicos_lsf://" && dl != "lsdicos_asl://") {
+    if(dl != "lsdicoslsf://" && dl != "lsdicosasl://") {
         window.location.href = dl;
     }
     window.close();
@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <a href="lsdicos://import/eyJuYW1lIjoibGFsYSIsImFuaW1hdGlvbnMiOls1XSwiZWRpdGFibGUiOnRydWUsImZhdm9yaXRlIjpmYWxzZX0=">Lien test 1</a>
+    <a href="lsdicoslsf://import/eyJuYW1lIjoibGFsYSIsImFuaW1hdGlvbnMiOls1XSwiZWRpdGFibGUiOnRydWUsImZhdm9yaXRlIjpmYWxzZX0=">Lien test 1</a>
 </body>
 
 

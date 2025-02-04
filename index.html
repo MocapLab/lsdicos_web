@@ -15,8 +15,8 @@
     // });
 
     var url = window.location.href;
-    var dl = url.replace("https://mocaplab.github.io/lsdicos_web/lsf?", "lsdicos_lsf://");
-    dl = dl.replace("https://mocaplab.github.io/lsdicos_web/asl?", "lsdicos_asl://");
+    var dl = url.replace("https://mocaplab.github.io/lsdicos_web/?lsf/", "lsdicos_lsf://");
+    dl = dl.replace("https://mocaplab.github.io/lsdicos_web/?asl/", "lsdicos_asl://");
     console.log(dl);
     if(dl != "lsdicos_lsf://" && dl != "lsdicos_asl://") {
         window.location.href = dl;

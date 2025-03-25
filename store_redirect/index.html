@@ -29,7 +29,7 @@
             } else if (url.includes("/?asl/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
-                    window.location.href = "https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicosasl";
+                    window.location.href = "https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl";
                     console.log(window.location.href);
                     window.close();
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -39,7 +39,7 @@
                     window.close();
                 } else {
                     // Default fallback (optional)
-                    document.body.innerHTML = "<h2>Please visit the app store on your device.</h2><a href=https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicosasl>Play Store</a> | <a href=https://apps.apple.com/app/sign3d-asl/id6741157589>App Store</a>";
+                    document.body.innerHTML = "<h2>Please visit the app store on your device.</h2><a href=https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl>Play Store</a> | <a href=https://apps.apple.com/app/sign3d-asl/id6741157589>App Store</a>";
                     console.log("fallback asl not on mobile");
                 }
             }

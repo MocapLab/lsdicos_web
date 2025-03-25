@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .store-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
     <script>
         console.log("hello");
         window.onload = function() {
@@ -30,7 +46,8 @@
                     // Default fallback (optional)
                     document.title = "Sign3D LSF";
                     document.body.innerHTML = `<h2>S'il vous plait, visitez ce lien avec votre mobile</h2>
-                    <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a> | 
+                    <img alt="Sign3D LSF" src="final_Sign3D_LSF.png" width="100"/>
+                    <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a> 
                     <a href=`+links["lsfios"]+`><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>`;
                     console.log("fallback lsf not on mobile");
                 }
@@ -49,22 +66,28 @@
                     // Default fallback (optional)
                     document.title = "Sign3D ASL";
                     document.body.innerHTML = `<h2>Please visit the app store on your device.</h2>
-                    <a href=`+links["aslandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> | 
-                    <a href=`+links["aslios"]+`><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>`;
+                    <img alt="Sign3D ASL" src='final_Sign3D_ASL.png' width="100"/>
+                    <a href=`+links["aslandro"]+`><img alt='Get it on Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> 
+                    <a href=`+links["aslios"]+`><img alt="Download on App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>`;
                     console.log("fallback asl not on mobile");
                 }
             } else {
                 document.title = "Sign3D Family";
                 document.body.innerHTML = `<h2>Our Sign Language applications</h2>
                 <h3>Sign3D LSF</h3>
+                <img alt="Sign3D LSF" src='final_Sign3D_LSF.png' width="100"/>
                 <p>Learn French Sign Language with Sign3D LSF</p>
-                <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a> | 
+                <div class='store-links'>
+                <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a>
                 <a href=`+links["lsfios"]+`><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
+                </div>
                 <h3>Sign3D ASL</h3>
+                <img alt="Sign3D ASL" src='final_Sign3D_ASL.png' width="100"/>
                 <p>Learn American Sign Language with Sign3D ASL</p>
-                <a href=`+links["aslandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> | 
-                <a href=`+links["aslios"]+`><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>`;
-
+                <div class='store-links'>
+                <a href=`+links["aslandro"]+`><img alt='Get it on Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> 
+                <a href=`+links["aslios"]+`><img alt="Download on App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>
+                </div>`;
             }
         };
     </script>

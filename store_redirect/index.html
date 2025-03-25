@@ -5,34 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
+        console.log("hello");
         window.onload = function() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             var url = window.location.href;
+            console.log(url);
             if (url.includes("/?lsf/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
                     window.location.href = "https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos";
+                    console.log(window.location.href);
                     window.close();
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
                     window.location.href = "https://apps.apple.com/app/sign3d-lsf/id6443809599";
+                    console.log(window.location.href);
                     window.close();
                 } else {
                     // Default fallback (optional)
                     document.body.innerHTML = "<h2>S'il vous plait, visitez ce lien avec votre mobile</h2><a href=https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos>Play Store</a> | <a href=https://apps.apple.com/app/sign3d-lsf/id6443809599>App Store</a>";
+                    console.log("fallback lsf not on mobile");
                 }
             } else if (url.includes("/?asl/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
                     window.location.href = "https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicosasl";
+                    console.log(window.location.href);
                     window.close();
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
                     window.location.href = "https://apps.apple.com/app/sign3d-asl/id6741157589";
+                    console.log(window.location.href);
                     window.close();
                 } else {
                     // Default fallback (optional)
                     document.body.innerHTML = "<h2>Please visit the app store on your device.</h2><a href=https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicosasl>Play Store</a> | <a href=https://apps.apple.com/app/sign3d-asl/id6741157589>App Store</a>";
+                    console.log("fallback asl not on mobile");
                 }
             }
         };

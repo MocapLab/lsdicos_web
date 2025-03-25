@@ -31,17 +31,21 @@
                          "aslandro":"https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
                          "aslios":"https://apps.apple.com/app/sign3d-asl/id6741157589?mt=flyer&ct=launch&pt=flyer"};
             console.log(url);
+            function redirectAndClose(url) {
+                window.location.href = url;
+                console.log(window.location.href);
+                setTimeout(function() {
+                    window.close();
+                }, 2000); // Give time for redirect before attempting to close
+            }
             if (url.includes("/?lsf/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
-                    window.location.href = links["lsfandro"];
-                    console.log(window.location.href);
-                    window.close();
+                    redirectAndClose(links["lsfandro"]);
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
-                    window.location.href = links["lsfios"];
-                    console.log(window.location.href);
-                    window.close();
+                    redirectAndClose(links["lsfios"]);
+                    
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D LSF";
@@ -56,14 +60,10 @@
             } else if (url.includes("/?asl/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
-                    window.location.href = links["aslandro"];
-                    console.log(window.location.href);
-                    window.close();
+                    redirectAndClose(links["aslandro"]);
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
-                    window.location.href = links["aslios"];
-                    console.log(window.location.href);
-                    window.close();
+                    redirectAndClose(links["aslios"]);
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D ASL";

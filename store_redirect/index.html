@@ -23,6 +23,7 @@
                     window.close();
                 } else {
                     // Default fallback (optional)
+                    document.title = "Sign3D LSF";
                     document.body.innerHTML = "<h2>S'il vous plait, visitez ce lien avec votre mobile</h2><a href=https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos>Play Store</a> | <a href=https://apps.apple.com/app/sign3d-lsf/id6443809599>App Store</a>";
                     console.log("fallback lsf not on mobile");
                 }
@@ -39,15 +40,18 @@
                     window.close();
                 } else {
                     // Default fallback (optional)
+                    document.title = "Sign3D ASL";
                     document.body.innerHTML = "<h2>Please visit the app store on your device.</h2><a href=https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl>Play Store</a> | <a href=https://apps.apple.com/app/sign3d-asl/id6741157589>App Store</a>";
                     console.log("fallback asl not on mobile");
                 }
+            } else {
+                document.title = "Sign3D Family";
             }
         };
     </script>
 </head>
 <body>
-    <h2>Our applications</h2>
+    <h2>Our Sign Language applications</h2>
     <h3>Sign3D LSF</h3>
     <p>Learn French Sign Language with Sign3D LSF</p>
     <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos">Open Sign3D LSF on Play Store</a> | <a href="https://apps.apple.com/app/sign3d-lsf/id6443809599">Open Sign3D LSF on App Store</a>

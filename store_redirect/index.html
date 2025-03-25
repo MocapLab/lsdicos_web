@@ -8,55 +8,67 @@
         console.log("hello");
         window.onload = function() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var userLang = navigator.language || navigator.userLanguage;
             var url = window.location.href;
+            var links = {"lsfandro":"https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+                         "lsfios":"https://apps.apple.com/app/sign3d-lsf/id6443809599",
+                         "aslandro":"https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+                         "aslios":"https://apps.apple.com/app/sign3d-asl/id6741157589"};
             console.log(url);
             if (url.includes("/?lsf/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
-                    window.location.href = "https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos";
+                    window.location.href = links["lsfandro"];
                     console.log(window.location.href);
                     window.close();
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
-                    window.location.href = "https://apps.apple.com/app/sign3d-lsf/id6443809599";
+                    window.location.href = links["lsfios"];
                     console.log(window.location.href);
                     window.close();
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D LSF";
-                    document.body.innerHTML = "<h2>S'il vous plait, visitez ce lien avec votre mobile</h2><a href=https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos>Play Store</a> | <a href=https://apps.apple.com/app/sign3d-lsf/id6443809599>App Store</a>";
+                    document.body.innerHTML = `<h2>S'il vous plait, visitez ce lien avec votre mobile</h2>
+                    <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a> | 
+                    <a href=`+links["lsfios"]+`><img alt="Disponible sur l'App Store" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>`;
                     console.log("fallback lsf not on mobile");
                 }
             } else if (url.includes("/?asl/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
-                    window.location.href = "https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl";
+                    window.location.href = links["aslandro"];
                     console.log(window.location.href);
                     window.close();
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
-                    window.location.href = "https://apps.apple.com/app/sign3d-asl/id6741157589";
+                    window.location.href = links["aslios"];
                     console.log(window.location.href);
                     window.close();
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D ASL";
-                    document.body.innerHTML = "<h2>Please visit the app store on your device.</h2><a href=https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl>Play Store</a> | <a href=https://apps.apple.com/app/sign3d-asl/id6741157589>App Store</a>";
+                    document.body.innerHTML = `<h2>Please visit the app store on your device.</h2>
+                    <a href=`+links["aslandro"]+`><img alt='Disponible sur Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> | 
+                    <a href=`+links["aslios"]+`><img alt="Disponible sur l'App Store" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>`;
                     console.log("fallback asl not on mobile");
                 }
             } else {
                 document.title = "Sign3D Family";
+                document.body.innerHTML = `<h2>Our Sign Language applications</h2>
+                <h3>Sign3D LSF</h3>
+                <p>Learn French Sign Language with Sign3D LSF</p>
+                <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a> | 
+                <a href=`+links["lsfios"]+`><img alt="Disponible sur l'App Store" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
+                <h3>Sign3D ASL</h3>
+                <p>Learn American Sign Language with Sign3D ASL</p>
+                <a href=`+links["aslandro"]+`><img alt='Disponible sur Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> | 
+                <a href=`+links["aslios"]+`><img alt="Disponible sur l'App Store" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>`;
+
             }
         };
     </script>
 </head>
 <body>
-    <h2>Our Sign Language applications</h2>
-    <h3>Sign3D LSF</h3>
-    <p>Learn French Sign Language with Sign3D LSF</p>
-    <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos">Open Sign3D LSF on Play Store</a> | <a href="https://apps.apple.com/app/sign3d-lsf/id6443809599">Open Sign3D LSF on App Store</a>
-    <h3>Sign3D ASL</h3>
-    <p>Learn American Sign Language with Sign3D ASL</p>
-    <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl">Open Sign3D ASL on Play Store</a> | <a href="https://apps.apple.com/app/sign3d-asl/id6741157589">Open Sign3D ASL on App Store</a>
-</body>
+    </body>
 </html>

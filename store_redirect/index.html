@@ -9,15 +9,11 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
         }
         .store-links {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
         }
     </style>
     <script>
@@ -49,12 +45,22 @@
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D LSF";
-                    document.body.innerHTML = `<h2>S'il vous plait, visitez ce lien avec votre mobile</h2>
+                    document.body.innerHTML = `<h2 style="color: #FFA967;">S'il vous plait, visitez ce lien avec votre mobile</h2>
                     <img alt="Sign3D LSF" src="final_Sign3D_LSF.png" width="100"/>
                     <div class='store-links'>
                     <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a> 
                     <a href=`+links["lsfios"]+`><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
-                    </div>`;
+                    </div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p>by Mocaplab</p>
+                    <img alt="Mocaplab" src='Logo2016_Noir_Mocaplab.png' width="400"/>
+                    <p>Discover our website</p>
+                    <a href="https://mocaplab.com">mocaplab.com</a>
+                    <p>Follow us on social media</p>
+                    <a href="https://www.facebook.com/mocaplab">Facebook</a>
+                    <a href="https://www.linkedin.com/company/mocaplab">LinkedIn</a>`;
                     console.log("fallback lsf not on mobile");
                 }
             } else if (url.includes("/?asl/")) {
@@ -67,31 +73,63 @@
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D ASL";
-                    document.body.innerHTML = `<h2>Please visit this link on your device.</h2>
+                    document.body.innerHTML = `<h2 style="color: #FFA967;">Please visit this link on your device.</h2>
                     <img alt="Sign3D ASL" src='final_Sign3D_ASL.png' width="100"/>
                     <div class='store-links'>
                     <a href=`+links["aslandro"]+`><img alt='Get it on Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> 
                     <a href=`+links["aslios"]+`><img alt="Download on App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>
-                    </div>`;
+                    </div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p>by Mocaplab</p>
+                    <img alt="Mocaplab" src='Logo2016_Noir_Mocaplab.png' width="400"/>
+                    <p>Discover our website</p>
+                    <a href="https://mocaplab.com">mocaplab.com</a>
+                    <p>Follow us on social media</p>
+                    <a href="https://www.facebook.com/mocaplab">Facebook</a>
+                    <a href="https://www.linkedin.com/company/mocaplab">LinkedIn</a>`;
                     console.log("fallback asl not on mobile");
                 }
             } else {
                 document.title = "Sign3D Family";
-                document.body.innerHTML = `<h2>Our Sign Language applications</h2>
-                <h3>Sign3D LSF</h3>
+                document.body.innerHTML = `<div class='store-links'>
+                <h2>Our Sign Language applications</h2>
+                <h3 style="color: #FFA967;">Sign3D LSF</h3>
                 <img alt="Sign3D LSF" src='final_Sign3D_LSF.png' width="100"/>
-                <p>Learn French Sign Language with Sign3D LSF</p>
-                <div class='store-links'>
+                <p>Discover French Sign Language with Sign3D LSF</p>
+                
                 <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a>
                 <a href=`+links["lsfios"]+`><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
-                </div>
-                <h3>Sign3D ASL</h3>
+                
+                <h3 style="color: #FFA967;">Sign3D ASL</h3>
                 <img alt="Sign3D ASL" src='final_Sign3D_ASL.png' width="100"/>
-                <p>Learn American Sign Language with Sign3D ASL</p>
-                <div class='store-links'>
+                <p>Discover American Sign Language with Sign3D ASL</p>
+
                 <a href=`+links["aslandro"]+`><img alt='Get it on Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> 
                 <a href=`+links["aslios"]+`><img alt="Download on App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>
-                </div>`;
+                
+                <h3>SignEveil2</h3>
+                <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignEveil2&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a>
+                <a href="https://apps.apple.com/app/signeveil-2/id1504933087?mt=flyer&ct=launch&pt=flyer"><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
+                <h3>SignBabble</h3>
+                <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignBables&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a>
+                <a href="https://apps.apple.com/app/sign-babble/id1462266052?mt=flyer&ct=launch&pt=flyer"><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
+                <h2>Our other applications</h2>
+                <h3>Krav Maga Secrets</h3>
+                <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.Kravmaga&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a>
+                <a href="https://apps.apple.com/fr/app/krav-maga-secrets/id1496334954?mt=flyer&ct=launch&pt=flyer"><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
+                </div>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p>by Mocaplab</p>
+                <img alt="Mocaplab" src='Logo2016_Noir_Mocaplab.png' width="400"/>
+                <p>Discover our website</p>
+                <a href="https://mocaplab.com">mocaplab.com</a>
+                <p>Follow us on social media</p>
+                <a href="https://www.facebook.com/mocaplab">Facebook</a>
+                <a href="https://www.linkedin.com/company/mocaplab">LinkedIn</a>`;
             }
         };
     </script>

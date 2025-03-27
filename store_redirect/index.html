@@ -87,16 +87,17 @@
             
             var text = {
                 title: isFrench ? "Téléchargez de nos applications en langue des signes" : "Download Our Sign Language Apps",
-                lsf: isFrench ? "Sign3D LSF - Langue des Signes Française" : "Sign3D LSF - French Sign Language",
-                asl: isFrench ? "Sign3D ASL - Langue des Signes Américaine" : "Sign3D ASL - American Sign Language",
-                signbabble: isFrench ? "SignBabble - Langue des Signes Britannique" : "SignBabble - British Sign Language",
-                signeveil: isFrench ? "SignEveil2 - Langue des Signes Française" : "SignEveil2 - French Sign Language",
-                kravmaga: isFrench ? "Krav Maga Secrets" : "Krav Maga Secrets",
+                lsf: isFrench ? "Sign3D LSF - Découvrez la Langue des Signes Française" : "Sign3D LSF - Discover French Sign Language",
+                asl: isFrench ? "Sign3D ASL - Découvrez la Langue des Signes Américaine" : "Sign3D ASL -  Discover American Sign Language",
+                signbabble: isFrench ? "Explorez la Langue des Signes Britannique" : "Explore British Sign Language",
+                signeveil: isFrench ? "Explorez la Langue des Signes Française" : "Explore French Sign Language",
+                kravmaga: isFrench ? "Découvrez des mouvements de Karv Maga" : "Discover Krav Maga movements",
                 downloadios: isFrench ? "'${text.downloadios}'" : "Download on the App Store",
                 downloadandro: isFrench ? "Disponible sur Google Play" : "Get it on Google Play",
                 visit: isFrench ? "Visitez notre site web" : "Visit Our Website",
                 follow: isFrench ? "Suivez-nous sur les réseaux sociaux" : "Follow us on social media",
-                discover: isFrench ? "Découvrez nos autres applications!" : "Discover our other applications!"
+                discover: isFrench ? "Découvrez nos autres applications!" : "Discover our other applications!",
+                please: isFrench ? "S'il vous plait, visitez ce lien avec votre mobile" : "Please visit this link on your device"
             };
             var badge = {
                 google: isFrench ? "https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" : "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
@@ -134,17 +135,18 @@
                     document.title = "Sign3D LSF";
                     document.body.innerHTML = `
                     <div class="container">
-                    <h2 style="color: #FFA967;">S'il vous plait, visitez ce lien avec votre mobile</h2>
-                    <div class='store-links'>
-                        <img alt="Sign3D LSF" src="final_Sign3D_LSF.png"/>
-                        <a href=${links.lsfandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
-                        <a href=${links.lsfios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
-                    </div>
-                    <p></p>
-                    <p></p>
-                    <a href=https://mocaplab.github.io/lsdicos_web/store_redirect/>${text.discover}</a>
-                    <p></p>
-                    ${footer}
+                        <h2 style="color: #FFA967;">${text.please}</h2>
+                        <div class='store-links'>
+                            <img alt="Sign3D LSF" src="final_Sign3D_LSF.png"/>
+                            <p>${text.lsf}</p>
+                            <a href=${links.lsfandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
+                            <a href=${links.lsfios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        </div>
+                        <p></p>
+                        <p></p>
+                        <a href=https://mocaplab.github.io/lsdicos_web/store_redirect/>${text.discover}</a>
+                        <p></p>
+                        ${footer}
                     </div>`;
                     console.log("fallback lsf not on mobile");
                 }
@@ -160,10 +162,10 @@
                     document.title = "Sign3D ASL";
                     document.body.innerHTML = `
                     <div class="container">
-                        <h2 style="color: #FFA967;">Please visit this link on your device.</h2>
+                        <h2 style="color: #FFA967;">${text.please}</h2>
                         <div class='store-links'>
                             <img alt="Sign3D ASL" src='final_Sign3D_ASL.png'/>
-
+                            <p>${text.asl}</p>
                             <a href=${links.aslandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
                             <a href=${links.aslios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
                         </div>
@@ -183,7 +185,7 @@
                         <h2>Our Sign Language applications</h2>
                         <h3 style="color: #FFA967;">Sign3D LSF</h3>
                         <img alt="Sign3D LSF" src='final_Sign3D_LSF.png'/>
-                        <p>Discover French Sign Language with Sign3D LSF</p>
+                        <p>${text.lsf}</p>
                         
                         <a href=${links["lsfandro"]}><img alt='${text.downloadandro}' src='${badge.google}'/></a>
                         <a href=${links["lsfios"]}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
@@ -191,7 +193,7 @@
                         <div class="separator"></div>
                         <h3 style="color: #FFA967;">Sign3D ASL</h3>
                         <img alt="Sign3D ASL" src='final_Sign3D_ASL.png'/>
-                        <p>Discover American Sign Language with Sign3D ASL</p>
+                        <p>>${text.asl}</p>
 
                         <a href=${links.aslandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
                         <a href=${links.aslios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
@@ -199,14 +201,14 @@
                         <div class="separator"></div>
                         <h3>SignEveil2</h3>
                         <img alt="SignEveil2" src='SignEveil2.png'/>
-                        <p>Discover French Sign Language with SignEveil2</p>
+                        <p>${text.signeveil}</p>
                         <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignEveil2&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='${text.downloadandro}' src='${badge.google}'/></a>
                         <a href="https://apps.apple.com/app/signeveil-2/id1504933087?mt=flyer&ct=launch&pt=flyer"><img alt="${text.downloadios}" src='${badge.ios}'/></a>
                         
                         <div class="separator"></div>
                         <h3>SignBabble</h3>
                         <img alt="SignBabble" src='SignBabble.png'/>
-                        <p>Discover British Sign Language with SignBabble</p>
+                        <p>${text.signbabble}</p>
                         <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignBables&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='${text.downloadandro}' src='${badge.google}'/></a>
                         <a href="https://apps.apple.com/app/sign-babble/id1462266052?mt=flyer&ct=launch&pt=flyer"><img alt='${text.downloadios}' src='${badge.ios}'/></a>
                         
@@ -214,7 +216,7 @@
                         <h2>Our other applications</h2>
                         <h3>Krav Maga Secrets</h3>
                         <img alt="Krav Maga Secrets" src='KMS.png'/>
-                        <p>Discover Krav Maga with Krav Maga Secrets</p>
+                        <p>${text.kravmaga}</p>
                         <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.Kravmaga&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='${text.downloadandro}' src='${badge.google}'/></a>
                         <a href="https://apps.apple.com/fr/app/krav-maga-secrets/id1496334954?mt=flyer&ct=launch&pt=flyer"><img alt='${text.downloadios}' src='${badge.ios}'/></a>
                     </div>

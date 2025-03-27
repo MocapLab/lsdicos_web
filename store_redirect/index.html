@@ -6,14 +6,67 @@
     <title>Redirecting...</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
-        }
-        .store-links {
-            display: flex;
-            flex-direction: column;
             align-items: center;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #FF6F00;
+        }
+        .store-links img {
+            width: 150px;
+            margin: 10px;
+        }
+        .store-links a img {
+            transition: transform 0.2s;
+            height: 50px;
+        }
+        .store-links a img:hover {
+            transform: scale(1.1);
+        }
+        .footer {
+            margin-top: 20px;
+        }
+        .footer img {
+            width: 120px;
+            margin-top: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .badge {
+            width: 150px;
+            margin: 10px;
+        }
+        .separator {
+            width: 80%;
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px auto;
         }
     </style>
     <script>
@@ -22,10 +75,43 @@
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             var userLang = navigator.language || navigator.userLanguage;
             var url = window.location.href;
-            var links = {"lsfandro":"https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-                         "lsfios":"https://apps.apple.com/app/sign3d-lsf/id6443809599?mt=flyer&ct=launch&pt=flyer",
-                         "aslandro":"https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-                         "aslios":"https://apps.apple.com/app/sign3d-asl/id6741157589?mt=flyer&ct=launch&pt=flyer"};
+            var deeplink = {
+                lsf: "market://launch?id=com.Mocaplab.lsdicos",
+                asl: "market://launch?id=com.Mocaplab.sign3dasl"
+            };
+            var links = {lsfandro:"https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+                         lsfios:"https://apps.apple.com/app/sign3d-lsf/id6443809599?mt=flyer&ct=launch&pt=flyer",
+                         aslandro:"https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+                         aslios:"https://apps.apple.com/app/sign3d-asl/id6741157589?mt=flyer&ct=launch&pt=flyer"};
+            var isFrench = userLang.startsWith("fr");
+            
+            var text = {
+                title: isFrench ? "Téléchargez de nos applications en langue des signes" : "Download Our Sign Language Apps",
+                lsf: isFrench ? "Sign3D LSF - Langue des Signes Française" : "Sign3D LSF - French Sign Language",
+                asl: isFrench ? "Sign3D ASL - Langue des Signes Américaine" : "Sign3D ASL - American Sign Language",
+                signbabble: isFrench ? "SignBabble - Langue des Signes Britannique" : "SignBabble - British Sign Language",
+                signeveil: isFrench ? "SignEveil2 - Langue des Signes Française" : "SignEveil2 - French Sign Language",
+                kravmaga: isFrench ? "Krav Maga Secrets" : "Krav Maga Secrets",
+                downloadios: isFrench ? "'${text.downloadios}'" : "Download on the App Store",
+                downloadandro: isFrench ? "Disponible sur Google Play" : "Get it on Google Play",
+                visit: isFrench ? "Visitez notre site web" : "Visit Our Website",
+                follow: isFrench ? "Suivez-nous sur les réseaux sociaux" : "Follow us on social media"
+            };
+            var badge = {
+                google: isFrench ? "https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" : "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+                ios: isFrench ? "https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr" : "https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us"
+            };
+            var footer = `
+                <div class="separator"></div>
+                <div class="footer">
+                    <p>by Mocaplab</p>
+                    <img alt="Mocaplab" src='Logo2016_Noir_Mocaplab.png' width="200"/>
+                    <p><a id="visit-btn" href="https://mocaplab.com" class="button">${text.visit}</a></p>
+                    <p>${text.follow}</p>
+                    <a href="https://www.facebook.com/mocaplab"><svg font-size="1.5rem" width="0.5em" "aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></a>
+                    <a href="https://www.linkedin.com/company/mocaplab"><svg font-size="1.5rem" width="0.875em" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>
+                </div>
+                `;
             console.log(url);
             function redirectAndClose(url) {
                 window.location.href = url;
@@ -37,102 +123,105 @@
             if (url.includes("/?lsf/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
-                    redirectAndClose(links["lsfandro"]);
+                    redirectAndClose(deeplink.lsf);
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
-                    redirectAndClose(links["lsfios"]);
+                    redirectAndClose(links.lsfios);
                     
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D LSF";
-                    document.body.innerHTML = `<h2 style="color: #FFA967;">S'il vous plait, visitez ce lien avec votre mobile</h2>
+                    document.body.innerHTML = `
+                    <div class="container">
+                    <h2 style="color: #FFA967;">S'il vous plait, visitez ce lien avec votre mobile</h2>
                     <div class='store-links'>
-                    <img alt="Sign3D LSF" src="final_Sign3D_LSF.png" width="100"/>
-                    <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a> 
-                    <a href=`+links["lsfios"]+`><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
+                        <img alt="Sign3D LSF" src="final_Sign3D_LSF.png"/>
+                        <a href=${links.lsfandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
+                        <a href=${links.lsfios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
                     </div>
                     <p></p>
                     <p></p>
                     <a href=https://mocaplab.github.io/lsdicos_web/store_redirect/>Découvrez nos autres applications!</a>
                     <p></p>
-                    <p>by Mocaplab</p>
-                    <img alt="Mocaplab" src='Logo2016_Noir_Mocaplab.png' width="200"/>
-                    <p>Discover our website</p>
-                    <a href="https://mocaplab.com">mocaplab.com</a>
-                    <p>Follow us on social media</p>
-                    <a href="https://www.facebook.com/mocaplab">Facebook</a>
-                    <a href="https://www.linkedin.com/company/mocaplab">LinkedIn</a>`;
+                    ${footer}
+                    </div>`;
                     console.log("fallback lsf not on mobile");
                 }
             } else if (url.includes("/?asl/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
-                    redirectAndClose(links["aslandro"]);
+                    redirectAndClose(deeplink.asl);
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
-                    redirectAndClose(links["aslios"]);
+                    redirectAndClose(links.aslios);
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D ASL";
-                    document.body.innerHTML = `<h2 style="color: #FFA967;">Please visit this link on your device.</h2>
-                    <div class='store-links'>
-                    <img alt="Sign3D ASL" src='final_Sign3D_ASL.png' width="100"/>
+                    document.body.innerHTML = `
+                    <div class="container">
+                        <h2 style="color: #FFA967;">Please visit this link on your device.</h2>
+                        <div class='store-links'>
+                            <img alt="Sign3D ASL" src='final_Sign3D_ASL.png'/>
 
-                    <a href=`+links["aslandro"]+`><img alt='Get it on Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> 
-                    <a href=`+links["aslios"]+`><img alt="Download on App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>
-                    </div>
-                    <p></p>
-                    <p></p>
-                    <a href=https://mocaplab.github.io/lsdicos_web/store_redirect/>Discover our other applications!</a>
-                    <p></p>
-                    <p>by Mocaplab</p>
-                    <img alt="Mocaplab" src='Logo2016_Noir_Mocaplab.png' width="200"/>
-                    <p>Discover our website</p>
-                    <a href="https://mocaplab.com">mocaplab.com</a>
-                    <p>Follow us on social media</p>
-                    <a href="https://www.facebook.com/mocaplab">Facebook</a>
-                    <a href="https://www.linkedin.com/company/mocaplab">LinkedIn</a>`;
+                            <a href=${links.aslandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
+                            <a href=${links.aslios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        </div>
+                        <p></p>
+                        <p></p>
+                        <a href=https://mocaplab.github.io/lsdicos_web/store_redirect/>Discover our other applications!</a>
+                        <p></p>
+                        ${footer}
+                    </div>`;
                     console.log("fallback asl not on mobile");
                 }
             } else {
                 document.title = "Sign3D Family";
-                document.body.innerHTML = `<div class='store-links'>
-                <h2>Our Sign Language applications</h2>
-                <h3 style="color: #FFA967;">Sign3D LSF</h3>
-                <img alt="Sign3D LSF" src='final_Sign3D_LSF.png' width="100"/>
-                <p>Discover French Sign Language with Sign3D LSF</p>
-                
-                <a href=`+links["lsfandro"]+`><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a>
-                <a href=`+links["lsfios"]+`><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
-                
-                <h3 style="color: #FFA967;">Sign3D ASL</h3>
-                <img alt="Sign3D ASL" src='final_Sign3D_ASL.png' width="100"/>
-                <p>Discover American Sign Language with Sign3D ASL</p>
+                document.body.innerHTML = `
+                <div class="container">
+                    <div class='store-links'>
+                        <h2>Our Sign Language applications</h2>
+                        <h3 style="color: #FFA967;">Sign3D LSF</h3>
+                        <img alt="Sign3D LSF" src='final_Sign3D_LSF.png'/>
+                        <p>Discover French Sign Language with Sign3D LSF</p>
+                        
+                        <a href=${links["lsfandro"]}><img alt='${text.downloadandro}' src='${badge.google}'/></a>
+                        <a href=${links["lsfios"]}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        
+                        <div class="separator"></div>
+                        <h3 style="color: #FFA967;">Sign3D ASL</h3>
+                        <img alt="Sign3D ASL" src='final_Sign3D_ASL.png'/>
+                        <p>Discover American Sign Language with Sign3D ASL</p>
 
-                <a href=`+links["aslandro"]+`><img alt='Get it on Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a> 
-                <a href=`+links["aslios"]+`><img alt="Download on App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us'/></a>
-                
-                <h3>SignEveil2</h3>
-                <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignEveil2&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a>
-                <a href="https://apps.apple.com/app/signeveil-2/id1504933087?mt=flyer&ct=launch&pt=flyer"><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
-                <h3>SignBabble</h3>
-                <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignBables&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a>
-                <a href="https://apps.apple.com/app/sign-babble/id1462266052?mt=flyer&ct=launch&pt=flyer"><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
-                <h2>Our other applications</h2>
-                <h3>Krav Maga Secrets</h3>
-                <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.Kravmaga&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='Disponible sur Google Play' width="100" src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/></a>
-                <a href="https://apps.apple.com/fr/app/krav-maga-secrets/id1496334954?mt=flyer&ct=launch&pt=flyer"><img alt="Disponible sur l'App Store" width="100" src='https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr'/></a>
-                </div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p>by Mocaplab</p>
-                <img alt="Mocaplab" src='Logo2016_Noir_Mocaplab.png' width="200"/>
-                <p>Discover our website</p>
-                <a href="https://mocaplab.com">mocaplab.com</a>
-                <p>Follow us on social media</p>
-                <a href="https://www.facebook.com/mocaplab">Facebook</a>
-                <a href="https://www.linkedin.com/company/mocaplab">LinkedIn</a>`;
+                        <a href=${links.aslandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
+                        <a href=${links.aslios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        
+                        <div class="separator"></div>
+                        <h3>SignEveil2</h3>
+                        <img alt="SignEveil2" src='SignEveil2.png'/>
+                        <p>Discover French Sign Language with SignEveil2</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignEveil2&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='${text.downloadandro}' src='${badge.google}'/></a>
+                        <a href="https://apps.apple.com/app/signeveil-2/id1504933087?mt=flyer&ct=launch&pt=flyer"><img alt="${text.downloadios}" src='${badge.ios}'/></a>
+                        
+                        <div class="separator"></div>
+                        <h3>SignBabble</h3>
+                        <img alt="SignBabble" src='SignBabble.png'/>
+                        <p>Discover British Sign Language with SignBabble</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignBables&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='${text.downloadandro}' src='${badge.google}'/></a>
+                        <a href="https://apps.apple.com/app/sign-babble/id1462266052?mt=flyer&ct=launch&pt=flyer"><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        
+                        <div class="separator"></div>
+                        <h2>Our other applications</h2>
+                        <h3>Krav Maga Secrets</h3>
+                        <img alt="Krav Maga Secrets" src='KMS.png'/>
+                        <p>Discover Krav Maga with Krav Maga Secrets</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.Kravmaga&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='${text.downloadandro}' src='${badge.google}'/></a>
+                        <a href="https://apps.apple.com/fr/app/krav-maga-secrets/id1496334954?mt=flyer&ct=launch&pt=flyer"><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                    </div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    ${footer}
+                </div>`;
             }
         };
     </script>

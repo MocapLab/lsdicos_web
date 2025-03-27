@@ -12,28 +12,49 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #0d0d0d;
             color: #333;
             margin: 0;
             padding: 20px;
         }
         .container {
             max-width: 600px;
-            background: #fff;
+            background: #252525;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fdfdfd;
+        }
+        .containerls {
+            max-width: 600px;
+            background: #252525;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fdfdfd;
         }
         h2 {
-            color: #FF6F00;
+            color: #fdfdfd;
         }
-        .store-links img {
+        .store-links {
+            display: flex;
+            justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Aligns items vertically */
+            gap: 15px; /* Adds space between elements */
+            flex-wrap: wrap; /* Ensures responsiveness */
+        }
+        .app-links img {
             width: 150px;
             margin: 10px;
         }
-        .store-links a img {
+        .store-links a img{
             transition: transform 0.2s;
-            height: 50px;
+        }
+        .ios {
+            height: 45px;
+            }
+        .playstore {
+            height: 60px;
         }
         .store-links a img:hover {
             transform: scale(1.1);
@@ -44,6 +65,13 @@
         .footer img {
             width: 120px;
             margin-top: 10px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Aligns items vertically */
+            gap: 15px; /* Adds space between elements */
+            flex-wrap: wrap; /* Ensures responsiveness */
         }
         .button {
             display: inline-block;
@@ -70,6 +98,24 @@
         }
     </style>
     <script>
+        function changeFavicon(src) {
+            let link = document.querySelector("link[rel~='icon']");
+            
+            if (!link) {
+                link = document.createElement("link");
+                link.rel = "icon";
+                document.head.appendChild(link);
+            }
+
+            // Ensure proper MIME type handling
+            if (src.endsWith(".ico")) {
+                link.type = "image/x-icon";
+            } else if (src.endsWith(".png")) {
+                link.type = "image/png";
+            }
+
+            link.href = src;
+        }
         console.log("hello");
         window.onload = function() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -112,8 +158,10 @@
                     <img alt="Mocaplab" src='Logo2016_Noir_Mocaplab.png' width="200"/>
                     <p><a id="visit-btn" href="https://mocaplab.com" class="button">${text.visit}</a></p>
                     <p>${text.follow}</p>
-                    <a href="https://www.facebook.com/mocaplab"><svg font-size="1.5rem" width="0.5em" "aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></a>
-                    <a href="https://www.linkedin.com/company/mocaplab"><svg font-size="1.5rem" width="0.875em" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>
+                    <div class="footer-links">
+                        <a href="https://www.facebook.com/mocaplab"><svg font-size="1.5rem" width="0.5em" "aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></a>
+                        <a href="https://www.linkedin.com/company/mocaplab"><svg font-size="1.5rem" width="0.875em" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>
+                    </div>
                 </div>
                 `;
             console.log(url);
@@ -134,14 +182,17 @@
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D LSF";
+                    changeFavicon("final_Sign3D_LSF.png");
                     document.body.innerHTML = `
-                    <div class="container">
+                    <div class="containerls">
                         <h2 style="color: #FFA967;">${text.please}</h2>
-                        <div class='store-links'>
+                        <div class='app-links'>
                             <img alt="Sign3D LSF" src="final_Sign3D_LSF.png"/>
                             <p>${text.lsf}</p>
-                            <a href=${links.lsfandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
-                            <a href=${links.lsfios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                            <div class=store-links>
+                                <a href=${links.lsfandro}><img class='playstore' alt='${text.downloadandro}' src='${badge.google}'/></a> 
+                                <a href=${links.lsfios}><img class='ios' alt='${text.downloadios}' src='${badge.ios}'/></a>
+                            </div>
                         </div>
                         <p></p>
                         <p></p>
@@ -161,14 +212,17 @@
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D ASL";
+                    changeFavicon("final_Sign3D_ASL.png");
                     document.body.innerHTML = `
-                    <div class="container">
+                    <div class="containerls">
                         <h2 style="color: #FFA967;">${text.please}</h2>
-                        <div class='store-links'>
+                        <div class='app-links'>
                             <img alt="Sign3D ASL" src='final_Sign3D_ASL.png'/>
                             <p>${text.asl}</p>
-                            <a href=${links.aslandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
-                            <a href=${links.aslios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                            <div class='store-links'>
+                                <a href=${links.aslandro}><img class='playstore' alt='${text.downloadandro}' src='${badge.google}'/></a> 
+                                <a href=${links.aslios}><img class='ios' alt='${text.downloadios}' src='${badge.ios}'/></a>
+                            </div>
                         </div>
                         <p></p>
                         <p></p>
@@ -179,47 +233,54 @@
                     console.log("fallback asl not on mobile");
                 }
             } else {
-                document.title = "Sign3D Family";
+                document.title = "Mocaplab apps";
+                changeFavicon("MCL.ico");
                 document.body.innerHTML = `
                 <div class="container">
-                    <div class='store-links'>
+                    <div class='app-links'>
                         <h2>Our Sign Language applications</h2>
                         <h3 style="color: #FFA967;">Sign3D LSF</h3>
                         <img alt="Sign3D LSF" src='final_Sign3D_LSF.png'/>
                         <p>${text.lsf}</p>
-                        
-                        <a href=${links["lsfandro"]}><img alt='${text.downloadandro}' src='${badge.google}'/></a>
-                        <a href=${links["lsfios"]}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
-                        
+                        <div class='store-links'>
+                            <a href=${links.lsfandro}><img alt='${text.downloadandro}' src='${badge.google}' class='playstore'/></a>
+                            <a href=${links.lsfios}><img alt='${text.downloadios}' src='${badge.ios}' class='ios'/></a>
+                        </div>
                         <div class="separator"></div>
                         <h3 style="color: #FFA967;">Sign3D ASL</h3>
                         <img alt="Sign3D ASL" src='final_Sign3D_ASL.png'/>
-                        <p>>${text.asl}</p>
-
-                        <a href=${links.aslandro}><img alt='${text.downloadandro}' src='${badge.google}'/></a> 
-                        <a href=${links.aslios}><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        <p>${text.asl}</p>
+                        <div class='store-links'>
+                            <a href=${links.aslandro}><img alt='${text.downloadandro}' src='${badge.google}' class='playstore'/></a> 
+                            <a href=${links.aslios}><img alt='${text.downloadios}' src='${badge.ios}' class='ios'/></a>
+                        </div>
                         
                         <div class="separator"></div>
                         <h3>SignEveil2</h3>
                         <img alt="SignEveil2" src='SignEveil2.png'/>
                         <p>${text.signeveil}</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignEveil2&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='${text.downloadandro}' src='${badge.google}'/></a>
-                        <a href="https://apps.apple.com/app/signeveil-2/id1504933087?mt=flyer&ct=launch&pt=flyer"><img alt="${text.downloadios}" src='${badge.ios}'/></a>
-                        
+                        <div class='store-links'>
+                            <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignEveil2&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img class='playstore'alt='${text.downloadandro}' src='${badge.google}'/></a>
+                            <a href="https://apps.apple.com/app/signeveil-2/id1504933087?mt=flyer&ct=launch&pt=flyer"><img class='ios' alt="${text.downloadios}" src='${badge.ios}'/></a>
+                        </div>
                         <div class="separator"></div>
                         <h3>SignBabble</h3>
-                        <img alt="SignBabble" src='SignBabble.jpeg'/>
+                        <img alt="SignBabble" src='SignBabble.jpg'/>
                         <p>${text.signbabble}</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignBables&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='${text.downloadandro}' src='${badge.google}'/></a>
-                        <a href="https://apps.apple.com/app/sign-babble/id1462266052?mt=flyer&ct=launch&pt=flyer"><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        <div class='store-links'>
+                            <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.SignBabble&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img class='playstore' alt='${text.downloadandro}' src='${badge.google}'/></a>
+                            <a href="https://apps.apple.com/app/sign-babble/id1462266052?mt=flyer&ct=launch&pt=flyer"><img class='ios' alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        </div>
                         
                         <div class="separator"></div>
                         <h2>Our other applications</h2>
                         <h3>Krav Maga Secrets</h3>
                         <img alt="Krav Maga Secrets" src='KMS.png'/>
                         <p>${text.kravmaga}</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.Kravmaga&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt='${text.downloadandro}' src='${badge.google}'/></a>
-                        <a href="https://apps.apple.com/fr/app/krav-maga-secrets/id1496334954?mt=flyer&ct=launch&pt=flyer"><img alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        <div class='store-links'>
+                            <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.Kravmaga&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img class='playstore' alt='${text.downloadandro}' src='${badge.google}'/></a>
+                            <a href="https://apps.apple.com/fr/app/krav-maga-secrets/id1496334954?mt=flyer&ct=launch&pt=flyer"><img class='ios' alt='${text.downloadios}' src='${badge.ios}'/></a>
+                        </div>
                     </div>
                     <p></p>
                     <p></p>

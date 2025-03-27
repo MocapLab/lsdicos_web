@@ -76,8 +76,10 @@
             var userLang = navigator.language || navigator.userLanguage;
             var url = window.location.href;
             var deeplink = {
-                lsf: "market://launch?id=com.Mocaplab.lsdicos",
-                asl: "market://launch?id=com.Mocaplab.sign3dasl"
+                lsfandro: "market://launch?id=com.Mocaplab.lsdicos",
+                aslandro: "market://launch?id=com.Mocaplab.sign3dasl",
+                lsfios: "itms-apps://apps.apple.com/app/sign3d-lsf/id6443809599",
+                aslios: "itms-apps://apps.apple.com/app/sign3d-asl/id6741157589"
             };
             var links = {lsfandro:"https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
                          lsfios:"https://apps.apple.com/app/sign3d-lsf/id6443809599?mt=flyer&ct=launch&pt=flyer",
@@ -106,7 +108,7 @@
             var footer = `
                 <div class="separator"></div>
                 <div class="footer">
-                    <p>by Mocaplab</p>
+                    <p>by</p>
                     <img alt="Mocaplab" src='Logo2016_Noir_Mocaplab.png' width="200"/>
                     <p><a id="visit-btn" href="https://mocaplab.com" class="button">${text.visit}</a></p>
                     <p>${text.follow}</p>
@@ -125,11 +127,10 @@
             if (url.includes("/?lsf/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
-                    redirectAndClose(deeplink.lsf);
+                    redirectAndClose(deeplink.lsfandro);
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
-                    redirectAndClose(links.lsfios);
-                    
+                    redirectAndClose(deeplink.lsfios);
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D LSF";
@@ -153,10 +154,10 @@
             } else if (url.includes("/?asl/")) {
                 if (/android/i.test(userAgent)) {
                     // Redirect to Google Play Store
-                    redirectAndClose(deeplink.asl);
+                    redirectAndClose(deeplink.aslandro);
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // Redirect to Apple App Store
-                    redirectAndClose(links.aslios);
+                    redirectAndClose(deeplink.aslios);
                 } else {
                     // Default fallback (optional)
                     document.title = "Sign3D ASL";

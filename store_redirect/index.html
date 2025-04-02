@@ -96,6 +96,9 @@
             background-color: #ddd;
             margin: 20px auto;
         }
+        a, a:visited, a:hover {
+             color: inherit;
+         }
     </style>
     <script>
         function changeFavicon(src) {
@@ -210,9 +213,8 @@
                     // Redirect to Apple App Store
                     redirectAndClose(deeplink.aslios);
                 } else {
-                    // Default fallback (optional)
-                    document.title = "Sign3D ASL";
                     changeFavicon("final_Sign3D_ASL.png");
+                    document.title = "Mocaplab apps";
                     document.body.innerHTML = `
                     <div class="containerls">
                         <h2 style="color: #FFA967;">${text.please}</h2>

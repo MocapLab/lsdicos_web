@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO: Default Title (JS will update for specific apps) -->
+    <title>Mocaplab Sign Language & Mobile Apps</title>
+    <!-- SEO: Meta Description -->
+    <meta name="description" content="Download Mocaplab's mobile applications, including Sign3D LSF (French Sign Language), Sign3D ASL (American Sign Language), SignEveil, SignBabble, and Krav Maga Secrets for iOS and Android.">
+    <!-- SEO: Canonical URL (Adjust YOUR_DOMAIN and PATH) -->
+    <link rel="canonical" href="https://mocaplab.github.io/lsdicos_web/store_redirect/" />
+    <link rel="icon" href="../assets/MCL.ico" type="image/x-icon">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center;
+            align-items: center;
+            text-align: center; */
+            background-color: #0d0d0d;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .container, .containerls {
+            max-width: 600px;
+            background: #252525;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fdfdfd;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h1, h2, h3 {
+            color: #fdfdfd;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #FFA967;
+        }
+        .store-links {
+            display: flex;
+            justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Aligns items vertically */
+            gap: 15px; /* Adds space between elements */
+            flex-wrap: wrap; /* Ensures responsiveness */
+        }
+        .app-links img {
+            width: 150px;
+            margin: 10px auto;
+            display: block;
+        }
+        .store-links a img{
+            transition: transform 0.2s;
+            vertical-align: middle;
+        }
+        .ios {
+            height: 45px;
+            width: auto;
+            }
+        .playstore {
+            height: 60px;
+            width: auto;
+        }
+        .store-links a img:hover {
+            transform: scale(1.1);
+        }
+        .sponsor-logo-bg {
+            background-color: #ffffff;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 5px 5px 0;
+            line-height: 0;
+        }
+        .sponsor-logo-bg img {
+            display: block;
+        }
+        .footer-container {
+            background: #252525;
+            color: #fdfdfd;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            margin: 20px auto 0;
+            box-sizing: border-box;
+        }
+        .footer {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .footer img {
+            width: 120px;
+            margin: 10px auto;
+            display: block;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            gap: 25px;
+            margin-top: 15px;
+        }
+        .footer-links a svg {
+            width: 24px;
+            height: 24px;
+            fill: #fdfdfd;
+            transition: fill 0.2s;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 15px 5px 10px;
+            background-color: #FFA967;
+            color: #0d0d0d;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+        .badge {
+            width: 150px;
+            margin: 10px;
+        }
+        .separator {
+            width: 80%;
+            height: 1px;
+            background-color: #555;
+            margin: 30px auto;
+        }
+        a, a:visited, a:hover {
+             color: inherit;
+             text-decoration: none;
+         }
+        .notice {
+            font-size: 0.8rem;
+            color: #ccc;
+            margin-top: 20px;
+        }
+        .notice img {
+            margin: 10px 5px;
+            vertical-align: middle;
+        }
+        noscript .container {
+            margin-top: 20px;
+        }
+        noscript h1 {
+            color: #fdfdfd;
+            text-align: center;
+        }
+    </style>
+    <script type="application/ld+json" id="app-schema"></script>
+</head>
+<body>
+    <!-- SEO: Static H1 for default view -->
+    <div class="main-container">
+        <h1 id="main-heading">Mocaplab Mobile Applications</h1>
+
+        <!-- Container where JS will inject content -->
+        <div id="dynamic-content">
+            <!-- Optional: Put loading indicator here -->
+             <p style="color:#fdfdfd;">Loading applications...</p>
+        </div>
+        <div id="lang-switcher" style="text-align: center; margin: 15px 0;">
+            <button id="lang-toggle-btn" class="button" style="background-color: #555; padding: 5px 10px; font-size: 0.9em;">Switch Language</button>
+        </div>
+         <!-- Footer can be static or generated by JS, static is better for SEO -->
+         <div class="footer-container" id="footer-section">
+             <div class="separator"></div>
+             <div class="footer">
+                 <p style="color:#ccc;">by</p>
+                 <img alt="Mocaplab Logo" src='../assets/Logo2016_Noir_Mocaplab.png' width="120"/> <!-- Adjusted width -->
+                 <p><a id="visit-btn" href="https://mocaplab.com" class="button">Visit Our Website</a></p>
+                 <p style="color:#ccc;" id="follow-text">Follow us on social media</p>
+                 <div class="footer-links">
+                     <a href="https://www.facebook.com/mocaplab" target="_blank" rel="noopener noreferrer" aria-label="Mocaplab on Facebook">
+                         <svg color="#37528b" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                     </a>
+                     <a href="https://www.linkedin.com/company/mocaplab" target="_blank" rel="noopener noreferrer" aria-label="Mocaplab on LinkedIn">
+                         <svg color="#026da5" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+                     </a>
+                </div>
+             </div>
+         </div>
+         <noscript>
+            <div class="main-container">
+                <div class="container">
+                    <h1>Mocaplab Mobile Applications</h1>
+                    <p>Please enable JavaScript to view our applications and get redirected to the appropriate app store, or use the links below.</p>
+                    <h2>Sign3D LSF - French Sign Language</h2>
+                    <div class='store-links'>
+                        <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos">Android</a> |
+                        <a href="https://apps.apple.com/app/sign3d-lsf/id6443809599">iOS</a>
+                    </div>
+                    <h2>Sign3D ASL - American Sign Language</h2>
+                    <div class='store-links'>
+                        <a href="https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl">Android</a> |
+                        <a href="https://apps.apple.com/app/sign3d-asl/id6741157589">iOS</a>
+                    </div>
+                    <!-- Add other apps similarly -->
+                    <p>Visit <a href="https://mocaplab.com">Mocaplab.com</a> for more information.</p>
+                </div>
+            </div>
+         </noscript>
+    <script>
+        function changeFavicon(src) {
+            let link = document.querySelector("link[rel~='icon']");
+            
+            if (!link) {
+                link = document.createElement("link");
+                link.rel = "icon";
+                document.head.appendChild(link);
+            }
+
+            // Ensure proper MIME type handling
+            link.type = src.endsWith(".ico") ? "image/x-icon" : "image/png";
+            link.href = src;
+        }
+        function updateSchema(schemaData) {
+            const schemaElement = document.getElementById('app-schema');
+            if (schemaElement) {
+                schemaElement.textContent = JSON.stringify(schemaData, null, 2);
+            }
+        }
+        let currentLang = 'en'; // Default
+        const textData = {
+            en: {
+                visit: "Visit Our Website",
+                follow: "Follow us on social media",
+                switch_lang_btn: "🇫🇷 - Français",
+                please: "Please visit this link on your mobile device to be redirected to the store.",
+                downloading: "Redirecting to the store...",
+                discover: "Discover our other applications!",
+                downloadios: "Download on the App Store",
+                downloadandro: "Get it on Google Play",
+                title_all: "Mocaplab Mobile Applications",
+                // Add other text labels here
+            },
+            fr: {
+                visit: "Visitez notre site web",
+                follow: "Suivez-nous sur les réseaux sociaux",
+                switch_lang_btn: "🇺🇸 - English",
+                please: "Veuillez visiter ce lien sur votre appareil mobile pour être redirigé vers le store.",
+                downloading: "Redirection vers le store...",
+                discover: "Découvrez nos autres applications!",
+                downloadios: "Télécharger dans l'App Store",
+                downloadandro: "Disponible sur Google Play",
+                title_all: "Applications Mobiles de Mocaplab",
+                // Add other text labels here
+            }
+        };
+        function getText(key) {
+            // Fallback to English if the key or language doesn't exist
+            return textData[currentLang]?.[key] || textData['en']?.[key] || key;
+        }
+        const appData = {
+            lsf: {
+                id: 'lsf',
+                name: "Sign3D LSF",
+                desc_en: "Sign3D LSF - Discover French Sign Language",
+                desc_fr: "Sign3D LSF - Découvrez la Langue des Signes Française",
+                icon: "../assets/final_Sign3D_LSF.png",
+                android_id: "com.Mocaplab.lsdicos",
+                ios_id: "6443809599", // Just the ID
+                android_url: "https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+                ios_url: "https://apps.apple.com/app/sign3d-lsf/id6443809599?mt=flyer&ct=launch&pt=flyer" // Use mt=8 for apps
+            },
+            asl: {
+                id: 'asl',
+                name: "Sign3D ASL",
+                desc_en: "Sign3D ASL - Discover American Sign Language",
+                desc_fr: "Sign3D ASL - Découvrez la Langue des Signes Américaine",
+                icon: "../assets/final_Sign3D_ASL.png",
+                android_id: "com.Mocaplab.sign3dasl",
+                ios_id: "6741157589",
+                android_url: "https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+                ios_url: "https://apps.apple.com/app/sign3d-asl/id6741157589?mt=flyer&ct=launch&pt=flyer" // Use mt=8
+            },
+            signeveil: {
+                 id: 'signeveil',
+                 name: "SignEveil2",
+                 desc_en: "Explore French Sign Language",
+                 desc_fr: "Explorez la Langue des Signes Française",
+                 icon: "../assets/SignEveil2.png",
+                 android_id: "com.Mocaplab.SignEveil2",
+                 ios_id: "id1504933087",
+                 android_url: "https://play.google.com/store/apps/details?id=com.Mocaplab.SignEveil2&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+                 ios_url: "https://apps.apple.com/app/signeveil-2/id1504933087?mt=flyer&ct=launch&pt=flyer"
+             },
+             signbabble: {
+                 id: 'signbabble',
+                 name: "SignBabble",
+                 desc_en: "Explore British Sign Language",
+                 desc_fr: "Explorez la Langue des Signes Britannique",
+                 icon: "../assets/SignBabble.jpg",
+                 android_id: "com.Mocaplab.SignBables",
+                 ios_id: "id1462266052",
+                 android_url: "https://play.google.com/store/apps/details?id=com.Mocaplab.SignBables&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+                 ios_url: "https://apps.apple.com/app/sign-babble/id1462266052?mt=flyer&ct=launch&pt=flyer"
+             },
+             kravmaga: {
+                 id: 'kravmaga',
+                 name: "Krav Maga Secrets",
+                 desc_en: "Discover Krav Maga movements",
+                 desc_fr: "Découvrez des mouvements de Krav Maga",
+                 icon: "../assets/KMS.png",
+                 android_id: "com.DefaultCompany.Kravmaga",
+                 ios_id: "id1496334954",
+                 android_url: "https://play.google.com/store/apps/details?id=com.DefaultCompany.Kravmaga&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+                 ios_url: "https://apps.apple.com/fr/app/krav-maga-secrets/id1496334954?mt=flyer&ct=launch&pt=flyer"
+             }
+        }
+        function renderPageContent() {
+            console.log("Rendering page content for language:", currentLang);
+            // Update HTML lang attribute
+            document.documentElement.lang = currentLang;
+
+            // Get references to elements
+            const dynamicContentEl = document.getElementById('dynamic-content');
+            const mainHeadingEl = document.getElementById('main-heading');
+            const visitBtn = document.getElementById('visit-btn');
+            const followText = document.getElementById('follow-text');
+            const langToggleBtn = document.getElementById('lang-toggle-btn');
+
+            // Update common static text
+            visitBtn.textContent = getText('visit');
+            followText.textContent = getText('follow');
+            langToggleBtn.textContent = getText('switch_lang_btn');
+            
+            var badge = {
+                    google: currentLang === 'fr' ? "https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" : "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+                    ios: currentLang === 'fr' ? "https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr" : "https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us"
+                };
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const url = window.location.href;
+            const isMobile = /android|iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream;
+            const isAndroid = /android/i.test(userAgent);
+            const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
+            function generateSchema(app) {
+                    const schema = {
+                        "@context": "https://schema.org",
+                        "@type": "SoftwareApplication",
+                        "name": app.name,
+                        "operatingSystem": "iOS, Android",
+                        "applicationCategory": "EducationApplication",
+                        "description": getText(app.id === 'lsf' ? 'desc_lsf' : (app.id === 'asl' ? 'desc_asl' : 'desc_all'))
+                    };
+                    if (app.android_url) {
+                        schema.operatingSystem = schema.operatingSystem.replace("Android", "").replace(", ,",",").trim();
+                        schema.operatingSystem += (schema.operatingSystem ? ", " : "") + "Android";
+                        schema.url = app.android_url;
+                    }
+                    if (app.ios_url) {
+                        schema.operatingSystem = schema.operatingSystem.replace("iOS", "").replace(", ,",",").trim(); // Avoid duplicates if only one OS
+                        schema.operatingSystem += (schema.operatingSystem ? ", " : "") + "iOS";
+                        if(!schema.url) schema.url = app.ios_url; 
+                    }
+                    
+                    // Clean up OS string
+                    schema.operatingSystem = schema.operatingSystem.replace(/^, /,"").replace(/, $/,"");
+
+                    return schema;
+                }
+                function renderAppSection(app) {
+                    const appDesc = currentLang === 'fr' ? app.desc_fr : app.desc_en;
+                    const iosBadgeUrl = badge.ios.replace('mocaplab.github.io/lsdicos_web/store_redirect', encodeURIComponent(app.ios_url || ''));
+                    let html = `
+                        <h3 style="color: #FFA967;">${app.name}</h3>
+                        <div class="app-links">
+                        <img alt="${app.name} App Icon" src='${app.icon}'/>
+                        <p>${appDesc}</p>
+                        <div class='store-links'>`;
+                    if (app.android_url) {
+                        html += `<a href="${app.android_url}" target="_blank" rel="noopener noreferrer"><img class='playstore' alt='${getText("downloadandro")}' src='${badge.google}'/></a>`;
+                    }
+                    if (app.ios_url) {
+                        html += `<a href="${app.ios_url}" target="_blank" rel="noopener noreferrer"><img class='ios' alt='${getText("downloadios")}' src='${iosBadgeUrl}'/></a>`;
+                    }
+                    html += `</div></div>`; // Close app links div
+                    return html;
+                }
+                // --- Logic ---
+                let targetApp = null;
+                if (url.includes("?lsf/")) {
+                    targetApp = appData.lsf;
+                } else if (url.includes("?asl/")) {
+                    targetApp = appData.asl;
+                }
+
+                if (targetApp && isMobile) {
+                    // Mobile device and specific app requested: Redirect to HTTPS store link
+                    const redirectUrl = isAndroid ? targetApp.android_url : (isIOS ? targetApp.ios_url : null);
+
+                    if (redirectUrl) {
+                        document.title = `${getText("downloading")} ${targetApp.name}`;
+                        mainHeadingEl.textContent = `${getText("downloading")} ${targetApp.name}`;
+                        dynamicContentEl.innerHTML = `<div class="containerls"><p>${getText("downloading")}</p></div>`; // Show message
+                        changeFavicon(targetApp.icon);
+                        updateSchema(generateSchema(targetApp)); // Update schema before redirect
+                        console.log("Redirecting to:", redirectUrl);
+                        window.location.href = redirectUrl;
+                        // NO window.close()
+                    } else {
+                        // Mobile, but OS not matched (e.g., Windows Phone) - Show info page
+                        document.title = targetApp.name;
+                        mainHeadingEl.textContent = targetApp.name;
+                        changeFavicon(targetApp.icon);
+                        dynamicContentEl.innerHTML = `
+                        <div class="containerls">
+                            <h2 style="color: #FFA967;">${targetApp.name}</h2>
+                            ${renderAppSection(targetApp)}
+                            <p><a href="${window.location.origin + window.location.pathname}">${getText("discover")}</a></p>
+                            <!-- Add France 2030 notice only if LSF -->
+                            ${targetApp.id === 'lsf' ? `
+                            <div class="notice">
+                                Opération soutenue par l’État dans le cadre du dispositif « Numérisation du patrimoine et de l’architecture » de la filière des industries culturelles et créatives (ICC) de France 2030, opérée par la Caisse des Dépôts
+                                <br>
+                                <span class="sponsor-logo-bg">
+                                    <img alt="Logo France 2030" src='../assets/France 2030.png' height="60"/>
+                                </span>
+                                <span class="sponsor-logo-bg">
+                                    <img alt="Logo Caisse des Dépôts" src='../assets/BANQUE_TERRITOIRES.png' height="60"/>
+                                </span>
+                            </div>` : ''}
+                        </div>`;
+                        updateSchema(generateSchema(targetApp));
+                    }
+
+                } else if (targetApp && !isMobile) {
+                    // Desktop and specific app requested: Show info page for that app
+                    document.title = targetApp.name;
+                    document.querySelector('meta[name="description"]').setAttribute("content", currentLang === 'fr' ? getText("desc_lsf") : getText("desc_asl") );
+                    mainHeadingEl.textContent = targetApp.name;
+                    changeFavicon(targetApp.icon);
+                    dynamicContentEl.innerHTML = `
+                        <div class="containerls">
+                            <h2 style="color: #FFA967;">${getText("please")}</h2>
+                            ${renderAppSection(targetApp)}
+                            <p><a href="${window.location.origin + window.location.pathname}">${getText("discover")}</a></p>
+                            <!-- Add France 2030 notice only if LSF -->
+                            ${targetApp.id === 'lsf' ? `
+                            <div class="notice">
+                                Opération soutenue par l’État dans le cadre du dispositif « Numérisation du patrimoine et de l’architecture » de la filière des industries culturelles et créatives (ICC) de France 2030, opérée par la Caisse des Dépôts
+                                <br>
+                                <span class="sponsor-logo-bg">
+                                    <img alt="Logo France 2030" src='../assets/France 2030.png' height="60"/>
+                                </span>
+                                <span class="sponsor-logo-bg">
+                                    <img alt="Logo Caisse des Dépôts" src='../assets/BANQUE_TERRITOIRES.png' height="60"/>
+                                </span>
+                            </div>` : ''}
+                        </div>`;
+                    updateSchema(generateSchema(targetApp));
+                    console.log("Desktop fallback for specific app:", targetApp.id);
+
+                } else {
+                    // Default view (no specific app OR on desktop): Show all apps
+                    document.title =  getText('title_all');
+                    document.querySelector('meta[name="description"]').setAttribute("content", getText("desc_all") ); // Set general meta description
+                    mainHeadingEl.textContent = currentLang === 'fr' ? "Nos Applications Mobiles" : "Our Mobile Applications"; // Localized H1
+                    changeFavicon("../assets/MCL.ico"); // Default favicon
+
+                    let allAppsHtml = "<div class='container app-links'>"; // Start container for all apps
+                    allAppsHtml += `<h2>${currentLang === 'fr' ? "Nos applications en Langue des Signes" : "Our Sign Language Applications"}</h2>`;
+
+                    allAppsHtml += renderAppSection(appData.lsf);
+                    allAppsHtml += `<div class="separator"></div>`;
+                    allAppsHtml += renderAppSection(appData.asl);
+                    allAppsHtml += `<div class="separator"></div>`;
+                    allAppsHtml += renderAppSection(appData.signeveil);
+                    allAppsHtml += `<div class="separator"></div>`;
+                    allAppsHtml += renderAppSection(appData.signbabble);
+
+                    allAppsHtml += `<div class="separator"></div>`;
+                    allAppsHtml += `<h2>${currentLang === 'fr' ? "Nos autres applications" : "Our Other Applications"}</h2>`;
+                    allAppsHtml += renderAppSection(appData.kravmaga);
+
+                    allAppsHtml += "</div>"; // End container
+
+                    dynamicContentEl.innerHTML = allAppsHtml;
+
+                    // Option 2: Multiple individual schemas (often better for detailed info)
+                    const multipleSchemas = Object.values(appData).map(app => generateSchema(app));
+                    updateSchema(multipleSchemas); // Pass array to function
+
+
+                    console.log("Displaying all apps");
+                }
+        };
+        function setLanguage(langCode) {
+            if (textData[langCode]) { // Check if language exists
+                currentLang = langCode;
+                localStorage.setItem('preferredLang', currentLang); // Store preference
+                renderPageContent(); // Re-render the page with the new language
+            } else {
+                console.warn("Language not supported:", langCode);
+            }
+        };
+        window.onload = function() {
+            // Determine initial language (Stored > Browser > Default 'en')
+            const storedLang = localStorage.getItem('preferredLang');
+            const browserLang = (navigator.language || navigator.userLanguage).startsWith("fr") ? 'fr' : 'en';
+            currentLang = storedLang || browserLang;
+
+            // Initial page render
+            renderPageContent();
+
+            // Add event listener to the button
+            const langToggleBtn = document.getElementById('lang-toggle-btn');
+            if (langToggleBtn) {
+                langToggleBtn.addEventListener('click', () => {
+                    const nextLang = (currentLang === 'en') ? 'fr' : 'en';
+                    setLanguage(nextLang);
+                });
+            } else {
+                console.error("Language toggle button not found!");
+            }
+        };
+
+    </script>
+
+</body>
+</html>

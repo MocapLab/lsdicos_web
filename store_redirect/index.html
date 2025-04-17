@@ -56,10 +56,10 @@
         }
         .store-links {
             display: flex;
-            justify-content: center; /* Centers items horizontally */
-            align-items: center; /* Aligns items vertically */
-            gap: 15px; /* Adds space between elements */
-            flex-wrap: wrap; /* Ensures responsiveness */
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         .app-links img {
             width: 150px;
@@ -249,25 +249,37 @@
                 visit: "Visit Our Website",
                 follow: "Follow us on social media",
                 switch_lang_btn: "🇫🇷 - Français",
-                please: "Please visit this link on your mobile device to be redirected to the store.",
                 downloading: "Redirecting to the store...",
                 discover: "Discover our other applications!",
                 downloadios: "Download on the App Store",
                 downloadandro: "Get it on Google Play",
                 title_all: "Mocaplab Mobile Applications",
-                // Add other text labels here
+                press_kit: "Press Kit",
+                press_kit_desc: "For media inquiries, please visit our press kit.",
+                press_kit_link: "../assets/DossierpresseSign3DLSF.pdf",
+                press_kit_button: "Download French Press Kit",
+                ls_app: "Our Sign Language Applications",
+                other_apps: "Our Other Applications",
+                confirm_redirect: "Do you want to open the store page for {appName}?",
+                please_desktop: "Please visit this link on your mobile device to be redirected to the store, or use the desktop links below.",
             },
             fr: {
                 visit: "Visitez notre site web",
                 follow: "Suivez-nous sur les réseaux sociaux",
                 switch_lang_btn: "🇺🇸 - English",
-                please: "Veuillez visiter ce lien sur votre appareil mobile pour être redirigé vers le store.",
                 downloading: "Redirection vers le store...",
                 discover: "Découvrez nos autres applications!",
                 downloadios: "Télécharger dans l'App Store",
                 downloadandro: "Disponible sur Google Play",
                 title_all: "Applications Mobiles de Mocaplab",
-                // Add other text labels here
+                press_kit: "Dossier de Presse",
+                press_kit_desc: "Pour les demandes de presse, veuillez visiter notre dossier de presse.",
+                press_kit_link: "../assets/DossierpresseSign3DLSF.pdf",
+                press_kit_button: "Télécharger le Dossier de Presse",
+                ls_app: "Nos applications en Langue des Signes",
+                other_apps: "Nos autres applications",
+                confirm_redirect: "Voulez-vous ouvrir la page du store pour {appName} ?",
+                please_desktop: "Veuillez visiter ce lien sur votre appareil mobile pour être redirigé vers le store, ou utilisez les liens pour ordinateur ci-dessous.",
             }
         };
         function getText(key) {
@@ -284,7 +296,7 @@
                 android_id: "com.Mocaplab.lsdicos",
                 ios_id: "6443809599", // Just the ID
                 android_url: "https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-                ios_url: "https://apps.apple.com/app/sign3d-lsf/id6443809599?mt=flyer&ct=launch&pt=flyer" // Use mt=8 for apps
+                ios_url: "https://apps.apple.com/app/sign3d-lsf/id6443809599?mt=flyer&ct=launch&pt=flyer"
             },
             asl: {
                 id: 'asl',
@@ -295,7 +307,7 @@
                 android_id: "com.Mocaplab.sign3dasl",
                 ios_id: "6741157589",
                 android_url: "https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-                ios_url: "https://apps.apple.com/app/sign3d-asl/id6741157589?mt=flyer&ct=launch&pt=flyer" // Use mt=8
+                ios_url: "https://apps.apple.com/app/sign3d-asl/id6741157589?mt=flyer&ct=launch&pt=flyer"
             },
             signeveil: {
                  id: 'signeveil',
@@ -358,27 +370,56 @@
             const isAndroid = /android/i.test(userAgent);
             const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
 
-            function generateSchema(app) {
+            function generateSchemaAndro(app) {
                     const schema = {
                         "@context": "https://schema.org",
-                        "@type": "SoftwareApplication",
+                        "@type": "MobileApplication",
                         "name": app.name,
-                        "operatingSystem": "iOS, Android",
+                        "operatingSystem": "Android",
                         "applicationCategory": "EducationApplication",
-                        "description": getText(app.id === 'lsf' ? 'desc_lsf' : (app.id === 'asl' ? 'desc_asl' : 'desc_all'))
+                        "author": {
+                            "@type": "Organization",
+                            "name": "Mocaplab",
+                            "url": "https://mocaplab.com",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "../assets/Logo2016_Noir_Mocaplab.png"
+                            }
+                        },
+                        "image": app.icon,
+                        "description": app.desc_en
                     };
                     if (app.android_url) {
-                        schema.operatingSystem = schema.operatingSystem.replace("Android", "").replace(", ,",",").trim();
-                        schema.operatingSystem += (schema.operatingSystem ? ", " : "") + "Android";
                         schema.url = app.android_url;
                     }
+                    
+                    schema.operatingSystem = schema.operatingSystem.replace(/^, /,"").replace(/, $/,"");
+
+                    return schema;
+                }
+                function generateSchemaIOS(app) {
+                    const schema = {
+                        "@context": "https://schema.org",
+                        "@type": "MobileApplication",
+                        "name": app.name,
+                        "operatingSystem": "iOS",
+                        "applicationCategory": "EducationApplication",
+                        "author": {
+                            "@type": "Organization",
+                            "name": "Mocaplab",
+                            "url": "https://mocaplab.com",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "../assets/Logo2016_Noir_Mocaplab.png"
+                            }
+                        },
+                        "image": app.icon,
+                        "description": app.desc_en
+                    };
                     if (app.ios_url) {
-                        schema.operatingSystem = schema.operatingSystem.replace("iOS", "").replace(", ,",",").trim(); // Avoid duplicates if only one OS
-                        schema.operatingSystem += (schema.operatingSystem ? ", " : "") + "iOS";
-                        if(!schema.url) schema.url = app.ios_url; 
+                        schema.url = app.ios_url;
                     }
                     
-                    // Clean up OS string
                     schema.operatingSystem = schema.operatingSystem.replace(/^, /,"").replace(/, $/,"");
 
                     return schema;
@@ -408,44 +449,58 @@
                 } else if (url.includes("?asl/")) {
                     targetApp = appData.asl;
                 }
-
+                const lsschema = []
                 if (targetApp && isMobile) {
                     // Mobile device and specific app requested: Redirect to HTTPS store link
                     const redirectUrl = isAndroid ? targetApp.android_url : (isIOS ? targetApp.ios_url : null);
-
                     if (redirectUrl) {
                         document.title = `${getText("downloading")} ${targetApp.name}`;
                         mainHeadingEl.textContent = `${getText("downloading")} ${targetApp.name}`;
                         dynamicContentEl.innerHTML = `<div class="containerls"><p>${getText("downloading")}</p></div>`; // Show message
                         changeFavicon(targetApp.icon);
-                        updateSchema(generateSchema(targetApp)); // Update schema before redirect
+                        lsschema.push(generateSchemaAndro(targetApp));
+                        lsschema.push(generateSchemaIOS(targetApp));
                         console.log("Redirecting to:", redirectUrl);
-                        window.location.href = redirectUrl;
-                        // NO window.close()
+                        const redirectUrl = isAndroid ? targetApp.android_url : (isIOS ? targetApp.ios_url : null);
+                        // Use setTimeout to allow the page content to render before showing the confirm dialog
+                        setTimeout(() => {
+                            const confirmMsg = getText('confirm_redirect', { appName: targetApp.name });
+                            if (confirm(confirmMsg)) {
+                                window.location.href = redirectUrl;
+                            }
+                        }, 100); // Short delay
                     } else {
                         // Mobile, but OS not matched (e.g., Windows Phone) - Show info page
                         document.title = targetApp.name;
                         mainHeadingEl.textContent = targetApp.name;
                         changeFavicon(targetApp.icon);
                         dynamicContentEl.innerHTML = `
-                        <div class="containerls">
-                            <h2 style="color: #FFA967;">${targetApp.name}</h2>
-                            ${renderAppSection(targetApp)}
-                            <p><a href="${window.location.origin + window.location.pathname}">${getText("discover")}</a></p>
-                            <!-- Add France 2030 notice only if LSF -->
-                            ${targetApp.id === 'lsf' ? `
-                            <div class="notice">
-                                Opération soutenue par l’État dans le cadre du dispositif « Numérisation du patrimoine et de l’architecture » de la filière des industries culturelles et créatives (ICC) de France 2030, opérée par la Caisse des Dépôts
-                                <br>
-                                <span class="sponsor-logo-bg">
-                                    <img alt="Logo France 2030" src='../assets/France 2030.png' height="60"/>
-                                </span>
-                                <span class="sponsor-logo-bg">
-                                    <img alt="Logo Caisse des Dépôts" src='../assets/BANQUE_TERRITOIRES.png' height="60"/>
-                                </span>
-                            </div>` : ''}
-                        </div>`;
-                        updateSchema(generateSchema(targetApp));
+                            <div class="containerls">
+                                <h2 style="color: #FFA967;">${targetApp.name}</h2>
+                                ${renderAppSection(targetApp)}
+                                <p><a href="${window.location.origin + window.location.pathname}">${getText("discover")}</a></p>
+                                <!-- Add France 2030 notice only if LSF -->
+                                ${targetApp.id === 'lsf' ? `
+                                <div class="separator"></div>
+                                <div class="press-kit">
+                                    <h3>${getText("press_kit")}</h3>
+                                    <p>${getText("press_kit_desc")}</p>
+                                    <a href="${getText("press_kit_link")}" class="button">${getText("press_kit_button")}</a>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="notice">
+                                    Opération soutenue par l’État dans le cadre du dispositif « Numérisation du patrimoine et de l’architecture » de la filière des industries culturelles et créatives (ICC) de France 2030, opérée par la Caisse des Dépôts
+                                    <br>
+                                    <span class="sponsor-logo-bg">
+                                        <img alt="Logo France 2030" src='../assets/France 2030.png' height="60"/>
+                                    </span>
+                                    <span class="sponsor-logo-bg">
+                                        <img alt="Logo Caisse des Dépôts" src='../assets/BANQUE_TERRITOIRES.png' height="60"/>
+                                    </span>
+                                </div>` : ''}
+                            </div>`;
+                        lsschema.push(generateSchemaAndro(targetApp));
+                        lsschema.push(generateSchemaIOS(targetApp));
                     }
 
                 } else if (targetApp && !isMobile) {
@@ -456,11 +511,18 @@
                     changeFavicon(targetApp.icon);
                     dynamicContentEl.innerHTML = `
                         <div class="containerls">
-                            <h2 style="color: #FFA967;">${getText("please")}</h2>
+                            <h2 style="color: #FFA967;">${getText("please_desktop")}</h2>
                             ${renderAppSection(targetApp)}
                             <p><a href="${window.location.origin + window.location.pathname}">${getText("discover")}</a></p>
                             <!-- Add France 2030 notice only if LSF -->
                             ${targetApp.id === 'lsf' ? `
+                            <div class="separator"></div>
+                            <div class="press-kit">
+                                <h3>${getText("press_kit")}</h3>
+                                <p>${getText("press_kit_desc")}</p>
+                                <a href="${getText("press_kit_link")}" class="button">${getText("press_kit_button")}</a>
+                            </div>
+                            <div class="separator"></div>
                             <div class="notice">
                                 Opération soutenue par l’État dans le cadre du dispositif « Numérisation du patrimoine et de l’architecture » de la filière des industries culturelles et créatives (ICC) de France 2030, opérée par la Caisse des Dépôts
                                 <br>
@@ -472,18 +534,18 @@
                                 </span>
                             </div>` : ''}
                         </div>`;
-                    updateSchema(generateSchema(targetApp));
+                    lsschema.push(generateSchemaAndro(targetApp));
+                    lsschema.push(generateSchemaIOS(targetApp));
                     console.log("Desktop fallback for specific app:", targetApp.id);
 
                 } else {
                     // Default view (no specific app OR on desktop): Show all apps
                     document.title =  getText('title_all');
                     document.querySelector('meta[name="description"]').setAttribute("content", getText("desc_all") ); // Set general meta description
-                    mainHeadingEl.textContent = currentLang === 'fr' ? "Nos Applications Mobiles" : "Our Mobile Applications"; // Localized H1
-                    changeFavicon("../assets/MCL.ico"); // Default favicon
+                    mainHeadingEl.textContent = getText("title_all"); // Localized H1
 
                     let allAppsHtml = "<div class='container app-links'>"; // Start container for all apps
-                    allAppsHtml += `<h2>${currentLang === 'fr' ? "Nos applications en Langue des Signes" : "Our Sign Language Applications"}</h2>`;
+                    allAppsHtml += `<h2>${getText("ls_app")}</h2>`;
 
                     allAppsHtml += renderAppSection(appData.lsf);
                     allAppsHtml += `<div class="separator"></div>`;
@@ -494,7 +556,7 @@
                     allAppsHtml += renderAppSection(appData.signbabble);
 
                     allAppsHtml += `<div class="separator"></div>`;
-                    allAppsHtml += `<h2>${currentLang === 'fr' ? "Nos autres applications" : "Our Other Applications"}</h2>`;
+                    allAppsHtml += `<h2>${getText("other_apps")}</h2>`;
                     allAppsHtml += renderAppSection(appData.kravmaga);
 
                     allAppsHtml += "</div>"; // End container
@@ -502,12 +564,13 @@
                     dynamicContentEl.innerHTML = allAppsHtml;
 
                     // Option 2: Multiple individual schemas (often better for detailed info)
-                    const multipleSchemas = Object.values(appData).map(app => generateSchema(app));
-                    updateSchema(multipleSchemas); // Pass array to function
-
-
+                    for (const app of Object.values(appData)) {
+                        lsschema.push(generateSchemaAndro(app));
+                        lsschema.push(generateSchemaIOS(app));
+                    }
                     console.log("Displaying all apps");
                 }
+                updateSchema(lsschema);
         };
         function setLanguage(langCode) {
             if (textData[langCode]) { // Check if language exists

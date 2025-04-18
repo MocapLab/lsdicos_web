@@ -489,7 +489,9 @@
                 android_id: "com.Mocaplab.lsdicos",
                 ios_id: "6443809599", // Just the ID
                 android_url: "https://play.google.com/store/apps/details?id=com.Mocaplab.lsdicos&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-                ios_url: "https://apps.apple.com/app/sign3d-lsf/id6443809599?mt=flyer&ct=launch&pt=flyer"
+                ios_url: "https://apps.apple.com/app/sign3d-lsf/id6443809599?mt=flyer&ct=launch&pt=flyer",
+                deepandro: "market://launch?id=com.Mocaplab.lsdicos",
+                deepios: "itms-apps://apps.apple.com/app/sign3d-lsf/id6443809599"
             },
             asl: {
                 id: 'asl',
@@ -500,7 +502,9 @@
                 android_id: "com.Mocaplab.sign3dasl",
                 ios_id: "6741157589",
                 android_url: "https://play.google.com/store/apps/details?id=com.Mocaplab.sign3dasl&utm_source=flyer&utm_campaign=launch&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-                ios_url: "https://apps.apple.com/app/sign3d-asl/id6741157589?mt=flyer&ct=launch&pt=flyer"
+                ios_url: "https://apps.apple.com/app/sign3d-asl/id6741157589?mt=flyer&ct=launch&pt=flyer",
+                deepandro: "market://launch?id=com.Mocaplab.sign3dasl",
+                aslios: "itms-apps://apps.apple.com/app/sign3d-asl/id6741157589"
             },
             signeveil: {
                  id: 'signeveil',
@@ -645,7 +649,7 @@
                 const lsschema = []
                 if (targetApp && isMobile) {
                     // Mobile device and specific app requested: Redirect to HTTPS store link
-                    const redirectUrl = isAndroid ? targetApp.android_url : (isIOS ? targetApp.ios_url : null);
+                    const redirectUrl = isAndroid ? targetApp.deepandro : (isIOS ? targetApp.deepios : null);
                     if (redirectUrl) {
                         document.title = `${getText("downloading")} ${targetApp.name}`;
                         mainHeadingEl.textContent = `${getText("downloading")} ${targetApp.name}`;
@@ -655,13 +659,9 @@
                         lsschema.push(generateSchemaIOS(targetApp));
                         console.log("Redirecting to:", redirectUrl);
                         const redirectUrl = isAndroid ? targetApp.android_url : (isIOS ? targetApp.ios_url : null);
-                        // Use setTimeout to allow the page content to render before showing the confirm dialog
-                        setTimeout(() => {
-                            const confirmMsg = getText('confirm_redirect', { appName: targetApp.name });
-                            if (confirm(confirmMsg)) {
-                                window.location.href = redirectUrl;
-                            }
-                        }, 100); // Short delay
+
+                        window.location.href = redirectUrl;
+                        
                     } else {
                         // Mobile, but OS not matched (e.g., Windows Phone) - Show info page
                         document.title = targetApp.name;

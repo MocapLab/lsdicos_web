@@ -655,6 +655,31 @@
                         mainHeadingEl.textContent = `${getText("downloading")} ${targetApp.name}`;
                         dynamicContentEl.innerHTML = `<div class="containerls"><p>${getText("downloading")}</p></div>`; // Show message
                         changeFavicon(targetApp.icon);
+                        dynamicContentEl.innerHTML = `
+                            <div class="containerls">
+                                <h2 style="color: #FFA967;">${targetApp.name}</h2>
+                                ${renderAppSection(targetApp)}
+                                <p><a href="${window.location.origin + window.location.pathname}">${getText("discover")}</a></p>
+                                <!-- Add France 2030 notice only if LSF -->
+                                ${targetApp.id === 'lsf' ? `
+                                <div class="separator"></div>
+                                <div class="press-kit">
+                                    <h3>${getText("press_kit")}</h3>
+                                    <p>${getText("press_kit_desc")}</p>
+                                    <a href="${getText("press_kit_link")}" class="button">${getText("press_kit_button")}</a>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="notice">
+                                    Opération soutenue par l’État dans le cadre du dispositif « Numérisation du patrimoine et de l’architecture » de la filière des industries culturelles et créatives (ICC) de France 2030, opérée par la Caisse des Dépôts
+                                    <br>
+                                    <span class="sponsor-logo-bg">
+                                        <img alt="Logo France 2030" src='../assets/France 2030.png' height="60"/>
+                                    </span>
+                                    <span class="sponsor-logo-bg">
+                                        <img alt="Logo Caisse des Dépôts" src='../assets/BANQUE_TERRITOIRES.png' height="60"/>
+                                    </span>
+                                </div>` : ''}
+                            </div>`;
                         lsschema.push(generateSchemaAndro(targetApp));
                         lsschema.push(generateSchemaIOS(targetApp));
                         console.log("Redirecting to:", redirectUrl);

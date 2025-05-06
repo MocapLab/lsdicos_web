@@ -5,13 +5,13 @@
 
     var url = window.location.href;
     if (url.includes("/?lsf/")) {
-        var dl = url.replace("https://mocaplab.github.io/lsdicos_web/?lsf/", "lsdicoslsf://");
+        var dl = url.replace("https://mocaplab.github.io/lsdicos_web/dev/?lsf/", "lsdicoslsf://");
         console.log(dl);
         if(dl != "lsdicoslsf://") {
             window.location.href = dl;
         }
     } else if(url.includes("/?asl/")) {
-        var dl = url.replace("https://mocaplab.github.io/lsdicos_web/?asl/", "lsdicosasl://");
+        var dl = url.replace("https://mocaplab.github.io/lsdicos_web/dev/?asl/", "lsdicosasl://");
         console.log(dl);
         if(dl != "lsdicosasl://") {
             window.location.href = dl;

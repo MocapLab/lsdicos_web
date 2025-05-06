@@ -2,7 +2,6 @@
 <head>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <script type="text/javascript">
-    console.log("hello");
 
     var url = window.location.href;
     if (url.includes("/?lsf/")) {
@@ -10,8 +9,8 @@
         console.log(dl);
         if(dl != "lsdicoslsf://") {
             window.location.href = dl;
+            window.close();
         }
-        window.close();
     } else if(url.includes("/?asl/")) {
         var dl = url.replace("https://mocaplab.github.io/lsdicos_web/?asl/", "lsdicosasl://");
         console.log(dl);
@@ -23,10 +22,6 @@
 
     </script>
 </head>
-
-<body>
-    <a href="lsdicoslsf://import/eyJuYW1lIjoibGFsYSIsImFuaW1hdGlvbnMiOls1XSwiZWRpdGFibGUiOnRydWUsImZhdm9yaXRlIjpmYWxzZX0=">Lien test 1</a>
-</body>
 
 
 </html>

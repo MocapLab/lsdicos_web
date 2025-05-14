@@ -57,3 +57,4 @@ ID	TYPE	TITLE	DESC	CTA	CANCEL	START_DATE	END_DATE	FREQUENCY	HIDE_IF_PACKS_BOUGHT
 55	3	🎒 Rentrée Scolaire 📚	📚 C’est la rentrée ! Apprenez les signes de l’école !			2025/09/01		0	0	0	0	0	
 56	3	👐 Journée Mondiale des Sourds 🤟	Célébrons la langue des signes ensemble !			2025/09/27		0	0	0	0	0	
 57	3	🕎 Hanoucca 🕯	Joyeux Hanoucca ! Découvrez notre playlist spéciale !			2025/12/14		0	0	0	0	0	
+58	3	Test!	Super test !			2025/05/14		0	0	0	0	0	

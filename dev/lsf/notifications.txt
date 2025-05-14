@@ -32,28 +32,28 @@ ID	TYPE	TITLE	DESC	CTA	CANCEL	START_DATE	END_DATE	FREQUENCY	HIDE_IF_PACKS_BOUGHT
 30	3	<b>🕒 Dernière ligne droite !</b>	Il te reste 7 jours pour profiter de -50% sur tous les packs de signes. Profite-en avant la fin ! 🚀			2025/09/23		0	1	0	0	0	
 31	3	<b>🚨 Offre promo : dernier rappel !</b>	 Dans 3 jours, c’est fini ! Débloque tes packs à -50%. N'attends plus pour enrichir ton vocabulaire en LSF !			2025/09/27		0	1	0	0	0	
 32	3	<b>⏰ Dernières heures pour profiter des -50% !</b>	 C’est ta dernière chance ! La promo de rentrée se termine aujourd'hui. Débloque tes packs de mots à moitié prix ! 			2025/09/30		0	1	0	0	0	
-33	3	👻 Apprenez les signes d’Halloween ! 🕸️	🎃 Découvrez notre playlist spéciale pour frissonner en langue des signes dans Sign 3D ! 🦇✨			2025/10/25	N/A	0	0	0	0	0	
-34	3	🕊 La Toussaint en langue des signes🕯️	Prenez un moment pour découvrir les signes associés à la Toussaint dans Sign 3D			2025/11/01	N/A	0	0	0	0	0	
-35	3	🤝 C'est la Semaine du Handicap ! ♿	Découvrez le vocabulaire spécial en langue des signes			2025/11/18	N/A	0	0	0	0	0	
-36	3	🎅 Célébrez Noël en langue des signes ! 🎁	🎄Découvrez notre playlist spéciale Noël dans Sign 3D ❄️✨			2025/12/24	N/A	0	0	0	0	0	
-37	3	🎆 Bonne année en langue des signes !	Apprenez les signes pour fêter la nouvelle année en LSF 🎊			2025/12/31	N/A	0	0	0	0	0	
-38	3	❤️ C'est la Saint-Valentin 💕	Déclarez votre amour en langue des signes pour une Saint-Valentin inoubliable 💘			2026/02/14	N/A	0	0	0	0	0	
-39	3	⛄ Vacances d’hiver : partez avec les bons signes !	Ski, montagne, chocolat chaud… Découvrez les signes de l’hiver !			2026/02/21	N/A	0	0	0	0	0	
-40	3	🌙 Le Ramadan en langue des signes !	Découvrez notre playlist spéciale pour parler du Ramadan en langue des signes			2026/02/17	N/A	0	0	0	0	0	
-41	3	👩 Journée des Droits de la Femme ✊	Découvrez les signes dédiés à cette journée importante.			2026/03/08	N/A	0	0	0	0	0	
-42	3	☘ Saint-Patrick 🍀	Bière, trèfle, Irlande… Apprenez les signes festifs du jour !			2026/03/17	N/A	0	0	0	0	0	
-43	3	🐟 Poisson d’avril 🎣	Découvrez notre playlist spéciale pour ne pas vous faites pas avoir… en langue des signes !			2025/04/01	N/A	0	0	0	0	0	
-44	3	🌸 Vacances de Printemps 🌼	Apprenez les signes des beaux jours et des activités en plein air !			2025/04/05	N/A	0	0	0	0	0	
-45	3	🍫 Joyeuses Pâques en langue des signes !	🐰Apprenez les signes du chocolat, des œufs et de la fête de Pâques !			2025/04/20	N/A	0	0	0	0	0	
-46	3	🌿 Fête du Travail 🔨	Apprenez les signes du travail et de la solidarité !			2025/05/01	N/A	0	0	0	0	0	
-47	3	🎥 Festival de Cannes 🎬	Faites votre cinéma en langue des signes !			2025/05/13	N/A	0	0	0	0	0	
-48	3	👩‍👧 Fête des Mères💐	Dites "Je t’aime Maman" en langue des signes !  Découvrez notre playlist spéciale !			2025/05/25	N/A	0	0	0	0	0	
-49	3	🏳️‍🌈 Mois des Fiertés en Langue des signes 🌈	Apprenez les signes de la diversité !			2025/06/01	N/A	0	0	0	0	0	
-50	3	👨‍👦 Fête des Pères 🎁	Découvrez les signes pour dire merci à votre papa !			2025/06/15	N/A	0	0	0	0	0	
-51	3	🎓 Baccalauréat 📚	Prêts pour le bac ? Découvrez notre playlist spéciale examens !			2025/06/13	N/A	0	0	0	0	0	
-52	3	🎶 Fête de la Musique 🎵	Découvrez notre playlist des instruments et du vocabulaire musical !			2025/06/21	N/A	0	0	0	0	0	
-53	3	🌞 Vacances d’été en Langue des signes 🏖	Soleil, mer, voyage… Apprenez les signes de l’été !			2025/07/01	N/A	0	0	0	0	0	
-54	3	🎆 Célébrez le 14 Juillet en langue des signes !	Découvrez les signes du feu d’artifice, du défilé et de la fête !			2025/07/14	N/A	0	0	0	0	0	
-55	3	🎒 Rentrée Scolaire 📚	📚 C’est la rentrée ! Apprenez les signes de l’école !			2025/09/01	N/A	0	0	0	0	0	
-56	3	👐 Journée Mondiale des Sourds 🤟	Célébrons la langue des signes ensemble !			2025/09/27	N/A	0	0	0	0	0	
-57	3	🕎 Hanoucca 🕯	Joyeux Hanoucca ! Découvrez notre playlist spéciale !			2025/12/14	N/A	0	0	0	0	0	
+33	3	👻 Apprenez les signes d’Halloween ! 🕸️	🎃 Découvrez notre playlist spéciale pour frissonner en langue des signes dans Sign 3D ! 🦇✨			2025/10/25		0	0	0	0	0	
+34	3	🕊 La Toussaint en langue des signes🕯️	Prenez un moment pour découvrir les signes associés à la Toussaint dans Sign 3D			2025/11/01		0	0	0	0	0	
+35	3	🤝 C'est la Semaine du Handicap ! ♿	Découvrez le vocabulaire spécial en langue des signes			2025/11/18		0	0	0	0	0	
+36	3	🎅 Célébrez Noël en langue des signes ! 🎁	🎄Découvrez notre playlist spéciale Noël dans Sign 3D ❄️✨			2025/12/24		0	0	0	0	0	
+37	3	🎆 Bonne année en langue des signes !	Apprenez les signes pour fêter la nouvelle année en LSF 🎊			2025/12/31		0	0	0	0	0	
+38	3	❤️ C'est la Saint-Valentin 💕	Déclarez votre amour en langue des signes pour une Saint-Valentin inoubliable 💘			2026/02/14		0	0	0	0	0	
+39	3	⛄ Vacances d’hiver : partez avec les bons signes !	Ski, montagne, chocolat chaud… Découvrez les signes de l’hiver !			2026/02/21		0	0	0	0	0	
+40	3	🌙 Le Ramadan en langue des signes !	Découvrez notre playlist spéciale pour parler du Ramadan en langue des signes			2026/02/17		0	0	0	0	0	
+41	3	👩 Journée des Droits de la Femme ✊	Découvrez les signes dédiés à cette journée importante.			2026/03/08		0	0	0	0	0	
+42	3	☘ Saint-Patrick 🍀	Bière, trèfle, Irlande… Apprenez les signes festifs du jour !			2026/03/17		0	0	0	0	0	
+43	3	🐟 Poisson d’avril 🎣	Découvrez notre playlist spéciale pour ne pas vous faites pas avoir… en langue des signes !			2025/04/01		0	0	0	0	0	
+44	3	🌸 Vacances de Printemps 🌼	Apprenez les signes des beaux jours et des activités en plein air !			2025/04/05		0	0	0	0	0	
+45	3	🍫 Joyeuses Pâques en langue des signes !	🐰Apprenez les signes du chocolat, des œufs et de la fête de Pâques !			2025/04/20		0	0	0	0	0	
+46	3	🌿 Fête du Travail 🔨	Apprenez les signes du travail et de la solidarité !			2025/05/01		0	0	0	0	0	
+47	3	🎥 Festival de Cannes 🎬	Faites votre cinéma en langue des signes !			2025/05/13		0	0	0	0	0	
+48	3	👩‍👧 Fête des Mères💐	Dites "Je t’aime Maman" en langue des signes !  Découvrez notre playlist spéciale !			2025/05/25		0	0	0	0	0	
+49	3	🏳️‍🌈 Mois des Fiertés en Langue des signes 🌈	Apprenez les signes de la diversité !			2025/06/01		0	0	0	0	0	
+50	3	👨‍👦 Fête des Pères 🎁	Découvrez les signes pour dire merci à votre papa !			2025/06/15		0	0	0	0	0	
+51	3	🎓 Baccalauréat 📚	Prêts pour le bac ? Découvrez notre playlist spéciale examens !			2025/06/13		0	0	0	0	0	
+52	3	🎶 Fête de la Musique 🎵	Découvrez notre playlist des instruments et du vocabulaire musical !			2025/06/21		0	0	0	0	0	
+53	3	🌞 Vacances d’été en Langue des signes 🏖	Soleil, mer, voyage… Apprenez les signes de l’été !			2025/07/01		0	0	0	0	0	
+54	3	🎆 Célébrez le 14 Juillet en langue des signes !	Découvrez les signes du feu d’artifice, du défilé et de la fête !			2025/07/14		0	0	0	0	0	
+55	3	🎒 Rentrée Scolaire 📚	📚 C’est la rentrée ! Apprenez les signes de l’école !			2025/09/01		0	0	0	0	0	
+56	3	👐 Journée Mondiale des Sourds 🤟	Célébrons la langue des signes ensemble !			2025/09/27		0	0	0	0	0	
+57	3	🕎 Hanoucca 🕯	Joyeux Hanoucca ! Découvrez notre playlist spéciale !			2025/12/14		0	0	0	0	0	

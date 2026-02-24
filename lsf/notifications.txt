@@ -1,4 +1,4 @@
-0.5.1	0												
+0.5.2	0												
 ID	TYPE	TITLE	DESC	CTA	CANCEL	START_DATE	END_DATE	FREQUENCY	HIDE_IF_PACKS_BOUGHT	SHOW_ON_FIRST_OPEN	TITLE_HAS_VARIABLE	DESC_HAS_VARIABLE	VARIABLE_DATE
 1	1	Bienvenue dans Sign 3D ! 👋	<size=55>🎉 <b>Bonne nouvelle !</b></size>\n\nPour fêter le lancement de Sign 3D, vous avez accès à 1500 signes gratuitement (au lieu de 200) jusqu'au 31/05\n\nEt ce n'est pas tout : <b>tous les packs de signes supplémentaires sont à -50%</b> pendant cette période de lancement. 💥\n\n📚 <b>Profitez-en dès maintenant pour enrichir votre vocabulaire en langue des signes !</b>	🔓 <b>Découvrir les packs disponibles</b>	Plus tard	2025/05/21	2025/06/30	0	0	1	0	0	
 2	1	⏳ Plus que $0 jours pour profiter de -50% !	La <b>promo de lancement</b> touche bientôt à sa fin ! Débloque les packs de signes à <b>moitié prix</b> et enrichis ton vocabulaire en langue des signes.\n\nNe laisse pas passer cette offre !	🛒 <b>Profiter de l'offre maintenant</b>	Plus tard	2025/06/15	2025/06/23	0	1	0	1	0	2025/06/30
@@ -27,75 +27,75 @@ ID	TYPE	TITLE	DESC	CTA	CANCEL	START_DATE	END_DATE	FREQUENCY	HIDE_IF_PACKS_BOUGHT
 25	1	🔍 Enrichissez votre dictionnaire !	<size=55>📦 <b>Envie d'en apprendre plus ?</b></size>\nVous pouvez <b>débloquer des packs de signes supplémentaires</b> directement depuis le <b>Store</b> de l'app. Enrichissez votre vocabulaire selon vos besoins !	🛒 <b>Découvrir les packs disponibles</b>	Plus tard	2025/10/01		0	1	0	0	0	
 26	2	👋 Bienvenue sur Sign 3D !	Plongez dans l’apprentissage du vocabulaire de la langue des signes française ! \n\n👐 Bonne exploration ! 🤗		Plus tard	2025/09/01	01/10/25	0	1	0	0	0	
 27	2	🎉 Offre spéciale ! 	Profitez de -50% sur tous les packs de signes 👐 Ne ratez pas cette chance !\n\n📅 Offre valable encore $0 jours	👉 J’en profite !	Plus tard	2025/09/01	01/10/25	0	1	0	0	1	2025/10/01
-28	3	🎉 Offre spéciale !	Pour la rentrée, profite des packs de signes à -50%. N'attends plus pour enrichir ton vocabulaire en LSF !			2025/09/01		0	1	0	0	0	
-29	3	⏳ Plus que 15 jours pour profiter des -50%	La promo de rentrée se termine bientôt ! 🎯 Débloque tes packs de signes avant qu’il ne soit trop tard ! !			2025/09/15		0	1	0	0	0	
-30	3	🕒 Dernière ligne droite !	Il te reste 7 jours pour profiter de -50% sur tous les packs de signes. Profite-en avant la fin ! 🚀			2025/09/23		0	1	0	0	0	
-31	3	🚨 Offre promo : dernier rappel !	 Dans 3 jours, c’est fini ! Débloque tes packs à -50%. N'attends plus pour enrichir ton vocabulaire en LSF !			2025/09/27		0	1	0	0	0	
-33	3	🌸 Vacances de Printemps 🌼	Apprenez les signes des beaux jours et des activités en plein air !			2025/04/05		0	0	0	0	0	
-34	3	🍫 Joyeuses Pâques en langue des signes !	🐰Apprenez les signes du chocolat, des œufs et de la fête de Pâques !			2025/04/20		0	0	0	0	0	
-35	3	🌿 Fête du Travail 🔨	Apprenez les signes du travail et de la solidarité !			2025/05/01		0	0	0	0	0	
-36	3	🎥 Festival de Cannes 🎬	Faites votre cinéma en langue des signes !			2025/05/13		0	0	0	0	0	
-37	3	👩‍👧 Fête des Mères💐	Dites "Je t’aime Maman" en langue des signes !  Découvrez notre playlist spéciale !			2025/05/25		0	0	0	0	0	
-38	3	🏳️‍🌈 Mois des Fiertés en Langue des signes 🌈	Apprenez les signes de la diversité !			2025/06/01		0	0	0	0	0	
-39	3	🎓 Baccalauréat 📚	Prêts pour le bac ? Découvrez notre playlist spéciale examens !			2025/06/13		0	0	0	0	0	
-40	3	👨‍👦 Fête des Pères 🎁	Découvrez les signes pour dire merci à votre papa !			2025/06/15		0	0	0	0	0	
-41	3	🎶 Fête de la Musique 🎵	Découvrez notre playlist des instruments et du vocabulaire musical !			2025/06/21		0	0	0	0	0	
-42	3	🌞 Vacances d’été en Langue des signes 🏖	Soleil, mer, voyage… Apprenez les signes de l’été !			2025/07/01		0	0	0	0	0	
-43	3	🎆 Célébrez le 14 Juillet en langue des signes !	Découvrez les signes du feu d’artifice, du défilé et de la fête !			2025/07/14		0	0	0	0	0	
-44	2	💡 Le saviez-vous?	Tous les lundis, nous vous proposons des "Le saviez-vous" à propos des langues des signes, tous les mercredi, nous vous décrivons des fonctionnalités que vous n'avez peut être pas vu dans l'application!			2025/07/14	2025/07/20	0	0	0	0	0	
-45	2	💡 Connaissez vous cette fonctionnalité ?	Toutes les semaines, nous vous proposons 10 signes pour apprendre et réviser au fur et à mesure des signes!			2025/07/16	2025/07/22	0	0	0	0	0	
-46	2	💡 Le saviez-vous?	La LSF est une langue à part entière. Elle a sa propre grammaire et syntaxe, différente du français oral			2025/07/21	2025/07/27	0	0	0	0	0	
-47	2	💡 Connaissez vous cette fonctionnalité ?	Si vous attendez plus d'une minute sur un signe, la caméra tourne toute seule autour du personnage, vous pouvez désactiver cette fonctionnalité dans les options			2025/07/23	2025/07/29	0	0	0	0	0	
-48	2	💡 Le saviez-vous?	La structure des phrases. en LSF suit l’ordre Temps + Lieu + Sujet + Action, contrairement au français écrit			2025/07/28	2025/08/03	0	0	0	0	0	
-49	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez changer la sensibilité de déplacement, de zoom et rotation de la caméra dans les options			2025/07/30	2025/08/05	0	0	0	0	0	
-50	2	💡 Le saviez-vous?	La LSF a été officiellement reconnue comme langue en France en 2005 par la loi sur l’égalité des droits et des chances			2025/08/04	2025/08/10	0	0	0	0	0	
-51	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez passer le personnage en mode "gaucher" depuis les options (...) du player			2025/08/06	2025/08/12	0	0	0	0	0	
-52	2	💡 Le saviez-vous?	L’abbé de l’Épée a fondé en 1760 la première école gratuite pour enfants sourds à Paris, après avoir observé deux jumelles sourdes communiquer par signes			2025/08/11	2025/08/17	0	0	0	0	0	
-53	2	💡 Connaissez vous cette fonctionnalité ?	Si vous passez la caméra dans le dos du personnage, son corps devient transparent pour vous permettre de mieux voir les formes de mains			2025/08/13	2025/08/19	0	0	0	0	0	
-54	2	💡 Le saviez-vous?	Des dictionnaires de signes existaient déjà au Moyen-Âge, notamment à l’abbaye de Cluny, utilisés par des moines soumis au silence			2025/08/18	2025/08/24	0	0	0	0	0	
-55	2	💡 Connaissez vous cette fonctionnalité ?	Depuis les options du player, vous pouvez partager un lien vers un signe			2025/08/20	2025/08/26	0	0	0	0	0	
-56	2	💡 Le saviez-vous?	La LSF a été interdite dans les écoles françaises en 1880 lors du Congrès de Milan, au profit de l’oralisme, et cette interdiction a duré près d’un siècle			2025/08/25	2025/08/31	0	0	0	0	0	
-57	2	💡 Connaissez vous cette fonctionnalité ?	Depuis les options d'une playlist, vous pouvez la partager avec un autre utilisateur de l'application			2025/08/27	2025/09/02	0	0	0	0	0	
-58	3	🎒 Rentrée Scolaire 📚	📚 C’est la rentrée ! Apprenez les signes de l’école !			2025/09/01		0	0	0	0	0	
-59	2	💡 Le saviez-vous?	Environ 100 000 personnes utilisent la LSF en France selon une étude en 2019			2025/09/01	2025/09/07	0	0	0	0	0	
-60	2	💡 Connaissez vous cette fonctionnalité ?	Dans le bouton, "Plus" de votre barre de navigation, vous trouverez une page "À propos" vous expliquant les spécificités des Langues des Signes et un petit historique de la LSF			2025/09/03	2025/09/09	0	0	0	0	0	
-61	2	💡 Le saviez-vous?	L’apprentissage de la LSF nécessite environ 120 heures pour une bonne base et 420 heures pour être à l’aise dans la plupart des situations			2025/09/08	2025/09/14	0	0	0	0	0	
-62	2	💡 Connaissez vous cette fonctionnalité ?	Dans les options, vous pouvez masquer ou afficher les signes non achetés			2025/09/10	2025/09/16	0	1	0	0	0	
-63	2	💡 Le saviez-vous?	La LSF utilise un alphabet manuel, permettant d’épeler des mots propres, noms ou termes techniques			2025/09/15	2025/09/21	0	0	0	0	0	
-64	2	💡 Connaissez vous cette fonctionnalité ?	Dans les options, vous pouvez relancer les tutoriaux de l'application			2025/09/17	2025/09/23	0	0	0	0	0	
-65	2	💡 Le saviez-vous?	La LSF n'est pas universelle: chaque pays a sa propre langue des signes, avec des différences majeures			2025/09/22	2025/09/28	0	0	0	0	0	
-66	2	💡 Connaissez vous cette fonctionnalité ?	Un signe ne va pas ou une traduction n'est pas correcte? Faites nous un retour, dans les options du player			2025/09/24	2025/09/30	0	0	0	0	0	
-67	3	👐 Journée Mondiale des Sourds 🤟	Célébrons la langue des signes ensemble !			2025/09/27		0	0	0	0	0	
-68	2	💡 Le saviez-vous?	La LSF s’est enrichie au fil des siècles, notamment par l’apport des élèves venus de toute la France à Paris au XVIIIe siècle			2025/09/29	2025/10/05	0	0	0	0	0	
-69	3	⏰ Dernières heures pour profiter des -50% !	 C’est ta dernière chance ! La promo de rentrée se termine aujourd'hui. Débloque tes packs de mots à moitié prix ! 			2025/09/30		0	1	0	0	0	
-70	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez lancer une recherche par signe depuis les options d'une playlist pour ne rechercher que dans ses éléments			2025/10/01	2025/10/07	0	0	0	0	0	
-71	2	💡 Le saviez-vous?	La première reconnaissance officielle de la LSF par une personnalité politique a eu lieu en 1994, grâce à Simone Veil			2025/10/06	2025/10/12	0	0	0	0	0	
-72	2	💡 Connaissez vous cette fonctionnalité ?	Depuis le player, vous pouvez visualiser les signes similaires à celui en cours de visionnage afin de découvrir d'autres signes			2025/10/08	2025/10/14	0	0	0	0	0	
-73	2	💡 Le saviez-vous?	La LSF a été longtemps méprisée et considérée comme un obstacle à l’intégration sociale des sourds, notamment au XIXe siècle			2025/10/13	2025/10/19	0	0	0	0	0	
-74	2	💡 Connaissez vous cette fonctionnalité ?	Toutes les semaines, nous vous proposons 10 signes pour apprendre et réviser au fur et à mesure des signes!			2025/10/15	2025/10/21	0	0	0	0	0	
-75	2	💡 Le saviez-vous?	Des formations professionnelles en LSF se sont développées depuis sa reconnaissance, accessibles aussi bien aux sourds qu’aux entendants			2025/10/20	2025/10/26	0	0	0	0	0	
-76	2	💡 Connaissez vous cette fonctionnalité ?	Si vous attendez plus d'une minute sur un signe, la caméra tourne toute seule autour du personnage, vous pouvez désactiver cette fonctionnalité dans les options			2025/10/22	2025/10/28	0	0	0	0	0	
-77	3	👻 Apprenez les signes d’Halloween ! 🕸️	🎃 Découvrez notre playlist spéciale pour frissonner en langue des signes dans Sign 3D ! 🦇✨			2025/10/25		0	0	0	0	0	
-78	2	💡 Le saviez-vous?	La LSF possède des variantes régionales, tout comme les langues orales			2025/10/27	2025/11/02	0	0	0	0	0	
-79	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez changer la sensibilité de déplacement, de zoom et rotation de la caméra dans les options			2025/10/29	2025/11/04	0	0	0	0	0	
-80	3	🕊 La Toussaint en langue des signes🕯️	Prenez un moment pour découvrir les signes associés à la Toussaint dans Sign 3D			2025/11/01		0	0	0	0	0	
-81	2	💡 Le saviez-vous?	La communauté sourde française considère l’abbé de l’Épée comme un bienfaiteur mondialement reconnu			2025/11/03	2025/11/09	0	0	0	0	0	
-82	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez passer le personnage en mode "gaucher" depuis les options (...) du player			2025/11/05	2025/11/11	0	0	0	0	0	
-83	2	💡 Le saviez-vous?	La LSF a inspiré la création de nombreuses autres langues des signes dans le monde, notamment l’American Sign Language (ASL)			2025/11/10	2025/11/16	0	0	0	0	0	
-84	2	💡 Connaissez vous cette fonctionnalité ?	Si vous passez la caméra dans le dos du personnage, son corps devient transparent pour vous permettre de mieux voir les formes de mains			2025/11/12	2025/11/18	0	0	0	0	0	
-85	2	💡 Le saviez-vous?	Des études en neurolinguistique ont prouvé que la LSF active les mêmes zones cérébrales que les langues orales			2025/11/17	2025/11/23	0	0	0	0	0	
-86	3	🤝 C'est la Semaine du Handicap ! ♿	Découvrez le vocabulaire spécial en langue des signes			2025/11/18		0	0	0	0	0	
-87	2	💡 Connaissez vous cette fonctionnalité ?	Depuis les options du player, vous pouvez partager un lien vers un signe			2025/11/19	2025/11/25	0	0	0	0	0	
-88	2	💡 Le saviez-vous?	La LSF a longtemps été transmise de façon clandestine dans les familles et internats, malgré son interdiction officielle			2025/11/24	2025/11/30	0	0	0	0	0	
-89	2	💡 Connaissez vous cette fonctionnalité ?	Depuis les options d'une playlist, vous pouvez la partager avec un autre utilisateur de l'application			2025/11/26	2025/12/02	0	0	0	0	0	
-90	2	💡 Le saviez-vous?	La LSF est désormais enseignée à l’école et à l’université, et peut être choisie comme option au baccalauréat			2025/12/01	2025/12/07	0	0	0	0	0	
-91	2	💡 Connaissez vous cette fonctionnalité ?	Dans le bouton, "Plus" de votre barre de navigation, vous trouverez une page "À propos" vous expliquant les spécificités des Langues des Signes et un petit historique de la LSF			2025/12/03	2025/12/09	0	0	0	0	0	
-92	3	🕎 Hanoucca 🕯	Joyeux Hanoucca ! Découvrez notre playlist spéciale !			2025/12/14		0	0	0	0	0	
-93	3	🎅 Célébrez Noël en langue des signes ! 🎁	🎄Découvrez notre playlist spéciale Noël dans Sign 3D ❄️✨			2025/12/24		0	0	0	0	0	
-94	3	🎆 Bonne année en langue des signes !	Apprenez les signes pour fêter la nouvelle année en LSF 🎊			2025/12/31		0	0	0	0	0	
-95	3	❤️ C'est la Saint-Valentin 💕	Déclarez votre amour en langue des signes pour une Saint-Valentin inoubliable 💘			2026/02/14		0	0	0	0	0	
-96	3	🌙 Le Ramadan en langue des signes !	Découvrez notre playlist spéciale pour parler du Ramadan en langue des signes			2026/02/17		0	0	0	0	0	
-97	3	⛄ Vacances d’hiver : partez avec les bons signes !	Ski, montagne, chocolat chaud… Découvrez les signes de l’hiver !			2026/02/21		0	0	0	0	0	
-98	3	👩 Journée des Droits de la Femme ✊	Découvrez les signes dédiés à cette journée importante.			2026/03/08		0	0	0	0	0	
-99	3	☘ Saint-Patrick 🍀	Bière, trèfle, Irlande… Apprenez les signes festifs du jour !			2026/03/17		0	0	0	0	0	
-100	3	🐟 Poisson d’avril 🎣	Découvrez notre playlist spéciale pour ne pas vous faites pas avoir… en langue des signes !			2026/04/01		0	0	0	0	0	
+28	3	⏰ Dernières heures pour profiter des -50% !	 C’est ta dernière chance ! La promo de rentrée se termine aujourd'hui. Débloque tes packs de mots à moitié prix ! 			2025/09/30		0	1	0	0	0	
+29	3	🎉 Offre spéciale !	Pour la rentrée, profite des packs de signes à -50%. N'attends plus pour enrichir ton vocabulaire en LSF !			2025/09/01		0	1	0	0	0	
+30	3	⏳ Plus que 15 jours pour profiter des -50%	La promo de rentrée se termine bientôt ! 🎯 Débloque tes packs de signes avant qu’il ne soit trop tard ! !			2025/09/15		0	1	0	0	0	
+31	3	🕒 Dernière ligne droite !	Il te reste 7 jours pour profiter de -50% sur tous les packs de signes. Profite-en avant la fin ! 🚀			2025/09/23		0	1	0	0	0	
+32	3	🚨 Offre promo : dernier rappel !	 Dans 3 jours, c’est fini ! Débloque tes packs à -50%. N'attends plus pour enrichir ton vocabulaire en LSF !			2025/09/27		0	1	0	0	0	
+33	2	💡 Le saviez-vous?	Tous les lundis, nous vous proposons des "Le saviez-vous" à propos des langues des signes, tous les mercredi, nous vous décrivons des fonctionnalités que vous n'avez peut être pas vu dans l'application!			2026/03/02	2026/03/08	0	0	0	0	0	
+34	2	💡 Connaissez vous cette fonctionnalité ?	Toutes les semaines, nous vous proposons 10 signes pour apprendre et réviser au fur et à mesure des signes!			2026/03/04	2026/03/08	0	0	0	0	0	
+35	2	💡 Le saviez-vous?	La LSF est une langue à part entière. Elle a sa propre grammaire et syntaxe, différente du français oral			2026/03/09	2026/03/15	0	0	0	0	0	
+36	2	💡 Connaissez vous cette fonctionnalité ?	Si vous attendez plus d'une minute sur un signe, la caméra tourne toute seule autour du personnage, vous pouvez désactiver cette fonctionnalité dans les options			2026/03/11	2026/03/15	0	0	0	0	0	
+37	2	💡 Le saviez-vous?	La structure des phrases. en LSF suit l’ordre Temps + Lieu + Sujet + Action, contrairement au français écrit			2026/03/16	2026/03/22	0	0	0	0	0	
+38	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez changer la sensibilité de déplacement, de zoom et rotation de la caméra dans les options			2026/03/18	2026/03/22	0	0	0	0	0	
+39	2	💡 Le saviez-vous?	La LSF a été officiellement reconnue comme langue en France en 2005 par la loi sur l’égalité des droits et des chances			2026/03/23	2026/03/29	0	0	0	0	0	
+40	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez passer le personnage en mode "gaucher" depuis les options (...) du player			2026/03/25	2026/03/29	0	0	0	0	0	
+41	2	💡 Le saviez-vous?	L’abbé de l’Épée a fondé en 1760 la première école gratuite pour enfants sourds à Paris, après avoir observé deux jumelles sourdes communiquer par signes			2026/03/30	2026/04/05	0	0	0	0	0	
+42	2	💡 Connaissez vous cette fonctionnalité ?	Si vous passez la caméra dans le dos du personnage, son corps devient transparent pour vous permettre de mieux voir les formes de mains			2026/04/01	2026/04/05	0	0	0	0	0	
+43	2	💡 Le saviez-vous?	Des dictionnaires de signes existaient déjà au Moyen-Âge, notamment à l’abbaye de Cluny, utilisés par des moines soumis au silence			2026/04/06	2026/04/12	0	0	0	0	0	
+44	2	💡 Connaissez vous cette fonctionnalité ?	Depuis les options du player, vous pouvez partager un lien vers un signe			2026/04/08	2026/04/12	0	0	0	0	0	
+45	2	💡 Le saviez-vous?	La LSF a été interdite dans les écoles françaises en 1880 lors du Congrès de Milan, au profit de l’oralisme, et cette interdiction a duré près d’un siècle			2026/04/13	2026/04/19	0	0	0	0	0	
+46	2	💡 Connaissez vous cette fonctionnalité ?	Depuis les options d'une playlist, vous pouvez la partager avec un autre utilisateur de l'application			2026/04/15	2026/04/19	0	0	0	0	0	
+47	2	💡 Le saviez-vous?	Environ 100 000 personnes utilisent la LSF en France selon une étude en 2019			2026/04/20	2026/04/26	0	0	0	0	0	
+48	2	💡 Connaissez vous cette fonctionnalité ?	Dans le bouton, "Plus" de votre barre de navigation, vous trouverez une page "À propos" vous expliquant les spécificités des Langues des Signes et un petit historique de la LSF			2026/04/22	2026/04/26	0	0	0	0	0	
+49	2	💡 Le saviez-vous?	L’apprentissage de la LSF nécessite environ 120 heures pour une bonne base et 420 heures pour être à l’aise dans la plupart des situations			2026/04/27	2026/05/03	0	0	0	0	0	
+50	2	💡 Connaissez vous cette fonctionnalité ?	Dans les options, vous pouvez masquer ou afficher les signes non achetés			2026/04/29	2026/05/03	0	0	0	0	0	
+51	2	💡 Le saviez-vous?	La LSF utilise un alphabet manuel, permettant d’épeler des mots propres, noms ou termes techniques			2026/05/04	2026/05/10	0	0	0	0	0	
+52	2	💡 Connaissez vous cette fonctionnalité ?	Dans les options, vous pouvez relancer les tutoriaux de l'application			2026/05/06	2026/05/10	0	0	0	0	0	
+53	2	💡 Le saviez-vous?	La LSF n'est pas universelle: chaque pays a sa propre langue des signes, avec des différences majeures			2026/05/11	2026/05/17	0	0	0	0	0	
+54	2	💡 Connaissez vous cette fonctionnalité ?	Un signe ne va pas ou une traduction n'est pas correcte? Faites nous un retour, dans les options du player			2026/05/13	2026/05/17	0	0	0	0	0	
+55	2	💡 Le saviez-vous?	La LSF s’est enrichie au fil des siècles, notamment par l’apport des élèves venus de toute la France à Paris au XVIIIe siècle			2026/05/18	2026/05/24	0	0	0	0	0	
+56	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez lancer une recherche par signe depuis les options d'une playlist pour ne rechercher que dans ses éléments			2026/05/20	2026/05/24	0	0	0	0	0	
+57	2	💡 Le saviez-vous?	La première reconnaissance officielle de la LSF par une personnalité politique a eu lieu en 1994, grâce à Simone Veil			2026/05/25	2026/05/31	0	0	0	0	0	
+58	2	💡 Connaissez vous cette fonctionnalité ?	Depuis le player, vous pouvez visualiser les signes similaires à celui en cours de visionnage afin de découvrir d'autres signes			2026/05/27	2026/05/31	0	0	0	0	0	
+59	2	💡 Le saviez-vous?	La LSF a été longtemps méprisée et considérée comme un obstacle à l’intégration sociale des sourds, notamment au XIXe siècle			2026/06/01	2026/06/07	0	0	0	0	0	
+60	2	💡 Connaissez vous cette fonctionnalité ?	Toutes les semaines, nous vous proposons 10 signes pour apprendre et réviser au fur et à mesure des signes!			2026/06/03	2026/06/07	0	0	0	0	0	
+61	2	💡 Le saviez-vous?	Des formations professionnelles en LSF se sont développées depuis sa reconnaissance, accessibles aussi bien aux sourds qu’aux entendants			2026/06/08	2026/06/14	0	0	0	0	0	
+62	2	💡 Connaissez vous cette fonctionnalité ?	Si vous attendez plus d'une minute sur un signe, la caméra tourne toute seule autour du personnage, vous pouvez désactiver cette fonctionnalité dans les options			2026/06/10	2026/06/14	0	0	0	0	0	
+63	2	💡 Le saviez-vous?	La LSF possède des variantes régionales, tout comme les langues orales			2026/06/15	2026/06/21	0	0	0	0	0	
+64	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez changer la sensibilité de déplacement, de zoom et rotation de la caméra dans les options			2026/06/17	2026/06/21	0	0	0	0	0	
+65	2	💡 Le saviez-vous?	La communauté sourde française considère l’abbé de l’Épée comme un bienfaiteur mondialement reconnu			2026/06/22	2026/06/28	0	0	0	0	0	
+66	2	💡 Connaissez vous cette fonctionnalité ?	Vous pouvez passer le personnage en mode "gaucher" depuis les options (...) du player			2026/06/24	2026/06/28	0	0	0	0	0	
+67	2	💡 Le saviez-vous?	La LSF a inspiré la création de nombreuses autres langues des signes dans le monde, notamment l’American Sign Language (ASL)			2026/06/29	2026/07/05	0	0	0	0	0	
+68	2	💡 Connaissez vous cette fonctionnalité ?	Si vous passez la caméra dans le dos du personnage, son corps devient transparent pour vous permettre de mieux voir les formes de mains			2026/07/01	2026/07/05	0	0	0	0	0	
+69	2	💡 Le saviez-vous?	Des études en neurolinguistique ont prouvé que la LSF active les mêmes zones cérébrales que les langues orales			2026/07/06	2026/07/12	0	0	0	0	0	
+70	2	💡 Connaissez vous cette fonctionnalité ?	Depuis les options du player, vous pouvez partager un lien vers un signe			2026/07/08	2026/07/12	0	0	0	0	0	
+71	2	💡 Le saviez-vous?	La LSF a longtemps été transmise de façon clandestine dans les familles et internats, malgré son interdiction officielle			2026/07/13	2026/07/19	0	0	0	0	0	
+72	2	💡 Connaissez vous cette fonctionnalité ?	Depuis les options d'une playlist, vous pouvez la partager avec un autre utilisateur de l'application			2026/07/15	2026/07/19	0	0	0	0	0	
+73	2	💡 Le saviez-vous?	La LSF est désormais enseignée à l’école et à l’université, et peut être choisie comme option au baccalauréat			2026/07/20	2026/07/26	0	0	0	0	0	
+74	2	💡 Connaissez vous cette fonctionnalité ?	Dans le bouton, "Plus" de votre barre de navigation, vous trouverez une page "À propos" vous expliquant les spécificités des Langues des Signes et un petit historique de la LSF			2026/07/22	2026/07/26	0	0	0	0	0	
+75	3	🌙 Le Ramadan en langue des signes !	Découvrez notre playlist spéciale pour parler du Ramadan en langue des signes			2026/02/17		0	0	0	0	0	
+76	3	⛄ Vacances d’hiver : partez avec les bons signes !	Ski, montagne, chocolat chaud… Découvrez les signes de l’hiver !			2026/02/21		0	0	0	0	0	
+77	3	👩 Journée des Droits de la Femme ✊	Découvrez les signes dédiés à cette journée importante.			2026/03/08		0	0	0	0	0	
+78	3	☘ Saint-Patrick 🍀	Bière, trèfle, Irlande… Apprenez les signes festifs du jour !			2026/03/17		0	0	0	0	0	
+79	3	🐟 Poisson d’avril 🎣	Découvrez notre playlist spéciale pour ne pas vous faites pas avoir… en langue des signes !			2026/03/29		0	0	0	0	0	
+80	3	🌸 Vacances de Printemps 🌼	Apprenez les signes des beaux jours et des activités en plein air !			2026/04/05		0	0	0	0	0	
+81	3	🍫 Joyeuses Pâques en langue des signes !	🐰Apprenez les signes du chocolat, des œufs et de la fête de Pâques !			2026/03/30		0	0	0	0	0	
+82	3	🌿 Fête du Travail 🔨	Apprenez les signes du travail et de la solidarité !			2025/05/01		0	0	0	0	0	
+83	3	🎥 Festival de Cannes 🎬	Faites votre cinéma en langue des signes !			2026/05/12		0	0	0	0	0	
+84	3	👩‍👧 Fête des Mères💐	Dites "Je t’aime Maman" en langue des signes !  Découvrez notre playlist spéciale !			2026/05/31		0	0	0	0	0	
+85	3	🏳️‍🌈 Mois des Fiertés en Langue des signes 🌈	Apprenez les signes de la diversité !			2026/06/01		0	0	0	0	0	
+86	3	🎓 Baccalauréat 📚	Prêts pour le bac ? Découvrez notre playlist spéciale examens !			2026/06/11		0	0	0	0	0	
+87	3	👨‍👦 Fête des Pères 🎁	Découvrez les signes pour dire merci à votre papa !			2026/06/21		0	0	0	0	0	
+88	3	🎶 Fête de la Musique 🎵	Découvrez notre playlist des instruments et du vocabulaire musical !			2026/06/21		0	0	0	0	0	
+89	3	🌞 Vacances d’été en Langue des signes 🏖	Soleil, mer, voyage… Apprenez les signes de l’été !			2026/07/01		0	0	0	0	0	
+90	3	🎆 Célébrez le 14 Juillet en langue des signes !	Découvrez les signes du feu d’artifice, du défilé et de la fête !			2026/07/14		0	0	0	0	0	
+91	3	🎒 Rentrée Scolaire 📚	📚 C’est la rentrée ! Apprenez les signes de l’école !			2026/09/01		0	0	0	0	0	
+92	3	👐 Journée Mondiale des Sourds 🤟	Célébrons la langue des signes ensemble !			2026/09/26		0	0	0	0	0	
+93	3	🕊 La Toussaint en langue des signes🕯️	Prenez un moment pour découvrir les signes associés à la Toussaint dans Sign 3D			2026/11/01		0	0	0	0	0	
+94	3	🤝 C'est la Semaine du Handicap ! ♿	Découvrez le vocabulaire spécial en langue des signes			2026/11/16		0	0	0	0	0	
+95	3	👻 Apprenez les signes d’Halloween ! 🕸️	🎃 Découvrez notre playlist spéciale pour frissonner en langue des signes dans Sign 3D ! 🦇✨			2026/10/31		0	0	0	0	0	
+96	3	🕎 Hanoucca 🕯	Joyeux Hanoucca ! Découvrez notre playlist spéciale !			2026/12/04		0	0	0	0	0	
+97	3	🎅 Célébrez Noël en langue des signes ! 🎁	🎄Découvrez notre playlist spéciale Noël dans Sign 3D ❄️✨			2026/12/24		0	0	0	0	0	
+98	3	🎆 Bonne année en langue des signes !	Apprenez les signes pour fêter la nouvelle année en LSF 🎊			2026/12/31		0	0	0	0	0	
+99	3	❤️ C'est la Saint-Valentin 💕	Déclarez votre amour en langue des signes pour une Saint-Valentin inoubliable 💘			2027/02/14		0	0	0	0	0	
